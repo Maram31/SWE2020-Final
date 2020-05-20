@@ -33,73 +33,22 @@ describe("SearchPage Test", function () {
         allPassed = allPassed && this.currentTest.state === 'passed';
     });
 
-    it("try log in with correct email and password then logout", function () {
-        return driver
-          .sleep(3000)
-          .elementById('com.example.spotify:id/login')
-          .click()
-          .sleep(10000)
-          .elementById('com.example.spotify:id/usernameLoginEdittext')
-          .sendKeys("ayaelsackaan.1999@gmail.com")
-          .sleep(3000)
-          .elementById('com.example.spotify:id/passwordLoginEdittext')
-          .sendKeys("222")
-          .sleep(3000)
-          .elementById('com.example.spotify:id/loginButton')
-          .click()
-          .sleep(3000)
-          .elementById('com.example.spotify:id/loginButton')
-          .click()
-          .sleep(5000)
-    
-          //.elementByXPath('/hierarchy/android.widget.Toast')
-          //.text().should.become('YAY')
+    it("should press on Premium button", async  function () {
+      return driver
+        .sleep(10000)
+          .elementByXPath(appSelectors.PremiumButton).click()
+          .sleep(3000)  
+          .elementByXPath(appSelectors.PremiumPageTitle)
+          .text().should.become('Take control of your music with Premium');
     });
-    it("should press on search button", async  function () {
-        return driver
-          .sleep(10000)
-            .elementById(appSelectors.SearchButton).click()
-            .sleep(10000)  
-            .elementById(appSelectors.SearchText)
-            .text().should.become('Search');
+    it("should press on Get Premium button", async  function () {
+      return driver
+        .sleep(10000)
+          .elementByXPath(appSelectors.GetPremiumButton).click()
+          .sleep(3000)  
+          //.elementById(appSelectors.)
+          //.text().should.become('Terms and conditions');
     });
-    it("should press on search icon to start searching", async  function () {
-        return driver
-          .sleep(10000)
-            .elementById(appSelectors.TOPSearchiCON).click()
-            .sleep(3000)
-            .elementById(appSelectors.SearchText)
-            .text().should.become('Search');
-    });
-    ///special char search $ ^ * ()+-= shows results doesn't contain these chars
-    it("should press on search Bar and search for SPECIAL CHARS such as $()*+", async  function () {
-        return driver
-          .sleep(10000)
-            .elementById(appSelectors.SearchBar).sendKeys("$()*+")
-            .sleep(10000)  
-            .elementById(appSelectors.FirstSearchResultText)
-            .text().should.become('No Results Found');
-    });
-    it("should press on search Bar and search for infinty input", async  function () {
-        return driver
-          .sleep(10000)
-            .elementById(appSelectors.SearchBar).sendKeys("gfgggggggggggggggggggggggggggggggggggggggsssssssssssssssssssssssshhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjsxxxxxxxxxxx")
-            .sleep(10000)  
-            .elementById(appSelectors.FirstSearchResultText)
-            .text().should.become('No Results Found');
-    });
-    
-    it("should press on search Bar and search for more than one letter", async  function () {
-        return driver
-          .sleep(10000)
-            .elementById(appSelectors.SearchBar).sendKeys("Cas")
-            .sleep(10000)  
-            .elementById(appSelectors.FirstSearchResultText)
-            .text().should.become('Castle On The Hill');
-    });
-    //entering 3 then 4 no change but 5 then 4 it shows a different results for 4 ///each time different results for the same input
-    //no "no results found" msg
-
 
 
 });
