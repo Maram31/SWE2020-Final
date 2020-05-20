@@ -1,9 +1,9 @@
 const {Builder, By, Key, until} = require("selenium-webdriver");
 const {expect} = require('chai');
-const driver = new Builder().forBrowser(require("../Driver").Driver).build();
-var Selectors=require("../AppSelectorsRealSpot");
+const driver = new Builder().forBrowser(require("../Helpers/Driver").Driver).build();
+var Selectors=require("../Helpers/AppSelectorsRealSpot");
 var title;
-//var Msgs=require("../AppErrorMsgsRealSpot");
+
 describe('PremiumPageTest', function(){
     this.timeout('1500000000');
     var Checkstring;
@@ -21,7 +21,7 @@ describe('PremiumPageTest', function(){
     }) 
 
  ////////////////////////////////////////////////////////
-    /*it('should press on Get 3 month free button which is at the blue background and get the new page title',async function() {
+    it('should press on Get 3 month free button which is at the blue background and get the new page title',async function() {
         await driver.findElement(By.xpath(Selectors.Get3monthFreebutton)).click();
         await driver.sleep(5000);
         title = await driver.getTitle();
@@ -43,7 +43,7 @@ describe('PremiumPageTest', function(){
         title = await driver.getTitle();
         expect(title).to.equal('Login - Spotify');//testing that i reached the req page
         await driver.get("https://www.spotify.com/eg-en/premium/?checkout=false#PLANS");
-    }) */
+    }) 
     it('should press on Get Started in Family Premium button and get the new page title',async function() {
         await driver.findElement(By.xpath(Selectors.GetStartedFamilybutton)).click();
         await driver.sleep(5000);
