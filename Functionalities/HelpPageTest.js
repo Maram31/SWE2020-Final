@@ -1,7 +1,7 @@
 const {Builder, By, Key, until} = require("selenium-webdriver");
 const {expect} = require('chai');
-const driver = new Builder().forBrowser(require("../Driver").Driver).build();
-var Selectors=require("../AppSelectorsRealSpot");
+const driver = new Builder().forBrowser(require("../Helpers/Driver").Driver).build();
+var Selectors=require("../Helpers/AppSelectorsRealSpot");
 describe('HelpPageTest', function(){
       this.timeout('1500000000');
 
@@ -20,7 +20,7 @@ describe('HelpPageTest', function(){
     }) 
     ///////////////Buttons Testing///////////////////
     
-    /*it('should press on Cannot Log in Button and get the new page title', async () => {
+    it('should press on Cannot Log in Button and get the new page title', async () => {
         await driver.findElement(By.xpath(Selectors.CannotLogInButton)).click();
         await driver.sleep(5000);
         const titleSpotReg = await driver.getTitle();
@@ -148,7 +148,7 @@ describe('HelpPageTest', function(){
 
 
 
-    /*it('should press on Speakers Button and get the new page title', async () => {
+    it('should press on Speakers Button and get the new page title', async () => {
         await driver.findElement(By.xpath(Selectors.SpeakersButton)).click();
         await driver.sleep(5000);
         const titleSpotReg = await driver.getTitle();
@@ -206,7 +206,7 @@ describe('HelpPageTest', function(){
         await driver.findElement(By.xpath(Selectors.BacktoHelpButton)).click();////getting back to the Help page
         await driver.sleep(5000);
     }) 
-    /*it('should press on Search Readmore Button and get the new page title', async () => {
+    it('should press on Search Readmore Button and get the new page title', async () => {
         await driver.findElement(By.xpath(Selectors.SearchReadmoreButton)).click();
         await driver.sleep(5000);
         const titleSpotReg = await driver.getTitle();
@@ -321,7 +321,7 @@ describe('HelpPageTest', function(){
         await driver.findElement(By.xpath(Selectors.WatchVideoButton5)).click();
         await driver.sleep(8000);
         await driver.findElement(By.xpath(Selectors.Border)).click();//clicking anywhere for the pop up video to disapear
-    })*/ 
+    })
 
     it('should press on Find Answers Button and get the new page title', async () => {
         await driver.findElement(By.xpath(Selectors.FindAnswersButton)).click();
