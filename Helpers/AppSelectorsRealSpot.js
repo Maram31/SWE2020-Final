@@ -140,3 +140,27 @@ exports.InputNewPlaylistNameXpath="//div[@id='main']/div/div[4]/div/div/div/div/
 exports.GoToHomePageXpath="//div[@id='main']/div/div[3]/div[2]/nav/ul/li/div/a/div/div[3]"
 exports.GoToAvatarXpath="(//button[@type='button'])[2]"
 exports.LogOutFromWebPlayetXpath="(//button[@type='button'])[3]"
+
+
+exports.WebPlayerFooterButtonXpath = '//*[@id="__next"]/div/div/div[3]/footer/nav/div[2]/dl[3]/dd[2]/a'
+exports.WebPlayerRecentlyPlayedLabelXpath ='//*[@id="main"]/div/div[3]/div[4]/div[1]/div/div[2]/section/section/div/section[1]/div/div[1]/div'
+
+//Music Bar Selectors
+exports.PlayButtonXpath='//*[@id="main"]/div/div[3]/div[3]/footer/div/div[2]/div/div[1]/div[3]/button'
+exports.NextButtonXpath='//*[@id="main"]/div/div[3]/div[3]/footer/div/div[2]/div/div[1]/div[4]/button'
+exports.PreviousButtonXpath='//*[@id="main"]/div/div[3]/div[3]/footer/div/div[2]/div/div[1]/div[2]/button'
+exports.EnableShuffleButtonXpath='//*[@id="main"]/div/div[3]/div[3]/footer/div/div[2]/div/div[1]/div[1]/button'
+exports.EnableRepeatButtonXpath='//*[@id="main"]/div/div[3]/div[3]/footer/div/div[2]/div/div[1]/div[5]/button'
+exports.PlaybackBarProgressTime1Xpath='//*[@id="main"]/div/div[3]/div[3]/footer/div/div[2]/div/div[2]/div[1]'
+exports.PlaybackBarProgressTime2Xpath='//*[@id="main"]/div/div[3]/div[3]/footer/div/div[2]/div/div[2]/div[3]'
+exports.ProgressBarXpath='//*[@id="main"]/div/div[3]/div[3]/footer/div/div[2]/div/div[2]/div[2]/div'
+exports.PlayQueueButtonXpath='//*[@id="main"]/div/div[3]/div[3]/footer/div/div[3]/div/div/div[1]/div/button'
+exports.ExtraControlsButtonXpath='//*[@id="main"]/div/div[3]/div[3]/footer/div/div[3]/div/div/div[2]'
+exports.MuteButtonXpath='//*[@id="main"]/div/div[3]/div[3]/footer/div/div[3]/div/div/div[3]/button'
+exports.VolumeProgressBarXpath='//*[@id="main"]/div/div[3]/div[3]/footer/div/div[3]/div/div/div[3]/div/div/div/div'
+exports.SongNameButtonXpath='//*[@id="main"]/div/div[3]/div[3]/footer/div/div[1]/div/div[2]/div[1]'
+exports.ArtistNameButtonXpath='//*[@id="main"]/div/div[3]/div[3]/footer/div/div[1]/div/div[2]/div[2]'
+exports.LikeSongButtonXpath='//*[@id="main"]/div/div[3]/div[3]/footer/div/div[1]/div/div[3]/button'
+exports.RemoveSongButtonXpath='//*[@id="main"]/div/div[3]/div[3]/footer/div/div[1]/div/div[4]/button'
+exports.NowPlayingPipToggleButtonXpath='//*[@id="main"]/div/div[3]/div[3]/footer/div/div[1]/div/div[5]'
+
