@@ -5,7 +5,8 @@ var wd = require("wd"),
     _ = require('underscore'),
     actions = require("../helpers/actions"),
     serverConfigs = require('../helpers/appium-servers');
-describe("SearchPage Test", function () {
+    wd.addPromiseChainMethod('swipe', actions.swipe);
+describe("Premium Page Test", function () {
     this.timeout(300000);
   var driver;
   var allPassed = true;
@@ -17,25 +18,35 @@ describe("SearchPage Test", function () {
     var desired =_.clone(require("../helpers/caps").android);
     desired.automationName= "UiAutomator2",
     desired.appPackage= "com.spotify.music",
-    desired.appActivity= "com.spotify.music.main.MainActivity" 
+    desired.appActivity= "com.spotify.music.MainActivity" 
 
     return driver
       .init(desired)
       .setImplicitWaitTimeout(10000);
     });
   after( async function () {
-    return driver
-      .quit()
-      .finally(function () {
-      });
-  });
-  afterEach( async function () {
-    allPassed = allPassed && this.currentTest.state === 'passed';
-  });
-
+        return driver
+            .quit()
+            .finally(function () {
+        });
+    });
+    afterEach( async function () {
+        allPassed = allPassed && this.currentTest.state === 'passed';
+    });
+    /*it("should Login successfully", async  function () {
+      return driver
+        .sleep(10000)
+          .elementByXPath("").click()
+          .sleep(3000)  
+          .elementByXPath("").sendKeys("aya.sameh.99@gmail.com")
+          .elementByXPath("").sendKeys("")
+          .elementByXPath("").click()
+          .elementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[1]/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout[1]/android.widget.TextView[2]")
+          .text().should.become('Made for you');
+    });*/
   it("should press on Premium button", async  function () {
     return driver
-      .sleep(10000)
+      .sleep(20000)
       .elementById(appSelectors.PremiumButtonID).click()
       .sleep(3000)  
       .elementById(appSelectors.PremiumPageTitleID)
@@ -43,23 +54,43 @@ describe("SearchPage Test", function () {
   });
   it("should press on Get Premium button", async  function () {
     return driver
-      .sleep(10000)
+      .sleep(5000)
       .elementByXPath(appSelectors.GetPremiumButton).click()
+      .sleep(10000)  
+      .elementByXPath(appSelectors.GetPremiumPriceText)
+      .text().should.become('49.99 EGP / الشهر بعد انتهاء النسخة التجريبية')
       .sleep(3000)  
       .elementById(appSelectors.GetPremiumCloseID).click()
   });
+  it("should scroll down the page", async function () {
+    return driver
+        .sleep(5000)
+          .then(function (els){
+              return driver.swipe({
+                startX: '32', startY: '1162',
+                endX: '32', endY: '478',
+                duration: 159
+            });
+          })  
+  });
   it("should press on Get Premium Individual button", async  function () {
     return driver
-      .sleep(10000)
+      .sleep(5000)
       .elementByXPath(appSelectors.GetPremiumIndividualButton).click()
+      .sleep(10000)  
+      .elementByXPath(appSelectors.GetPremiumPriceText)
+      .text().should.become('49.99 EGP / الشهر بعد انتهاء النسخة التجريبية')
       .sleep(3000)  
       .elementById(appSelectors.GetPremiumCloseID).click()
   });
   it("should press on Get Premium Family button", async  function () {
     return driver
-      .sleep(10000)
+      .sleep(5000)
       .elementByXPath(appSelectors.GetPremiumFamilyButton).click()
-      .sleep(3000)  
+      .sleep(10000)  
+      .elementByXPath(appSelectors.GetPremiumPriceText)
+      .text().should.become('79.99 EGP / الشهر بعد انتهاء النسخة التجريبية')
+      .sleep(3000)   
       .elementById(appSelectors.GetPremiumCloseID).click()
   });
 });
