@@ -46,39 +46,54 @@ describe("Music Quality Streaming Test", function () {
 	    .sleep(10000)
         .elementByXPath(appSelectors.SettingButton).click()
         .sleep(3000)  
-        .elementByXPath(appSelectors.AudioQualityButton)
+        .elementByXPath(appSelectors.MusicQualityButton)
         .text().should.become('Streaming');
   });
-  it("should press on Basic Audio Quality button then back and check if the audio quality successfully changed", async  function () {
+  it("should choose Low Music Quality and check if the Streaming quality successfully changed", async  function () {
     return driver
       .sleep(10000)
-      .elementByXPath(appSelectors.AudioQualityButton).click()
+      .elementByXPath(appSelectors.MusicQualityTypeButton).click()
       .sleep(3000) 
-      .elementById(appSelectors.BasicQualityButtonId).click()
-      .sleep(3000) 
-      .elementById(appSelectors.AudioQualitysubTitleId)
-      .text().should.become('Automatic');
-  });
-  it("should press on Basic Audio Quality button then back and check if the audio quality successfully changed", async  function () {
-    return driver
-      .sleep(10000)
-      .elementByXPath(appSelectors.AudioQualityButton).click()
-      .sleep(3000) 
-      .elementById(appSelectors.BasicQualityButtonId).click()
-      .sleep(3000) 
-      .elementById(appSelectors.AudioQualitysubTitleId)
+      .elementByXPath(appSelectors.LowQualityButton).click()
+      .elementByXPath(appSelectors.MusicQualityTypeButton)
       .text().should.become('Low');
   });
-  
-  it("should press on Basic Audio Quality button then back and check if the audio quality successfully changed", async  function () {
+  it("should press on Automatic Music Quality button and check if the Streaming quality successfully changed", async  function () {
     return driver
       .sleep(10000)
-      .elementByXPath(appSelectors.AudioQualityButton).click()
+      .elementByXPath(appSelectors.MusicQualityTypeButton).click()
       .sleep(3000) 
-      .elementById(appSelectors.BasicQualityButtonId).click()
+      .elementByXPath(appSelectors.AutomaticQualityButton).click()
+      .elementByXPath(appSelectors.MusicQualityTypeButton)
+      .text().should.become('Automatic');
+  });
+  it("should press on Normal Music Quality button and check if the Streaming quality successfully changed", async  function () {
+    return driver
+      .sleep(10000)
+      .elementByXPath(appSelectors.MusicQualityTypeButton).click()
       .sleep(3000) 
-      .elementById(appSelectors.AudioQualitysubTitleId)
+      .elementByXPath(appSelectors.NormalQualityButton).click()
+      .elementByXPath(appSelectors.MusicQualityTypeButton)
       .text().should.become('Normal');
+  });
+  
+  it("should press on High Music Quality button and check if the Streaming quality successfully changed", async  function () {
+    return driver
+      .sleep(10000)
+      .elementByXPath(appSelectors.MusicQualityTypeButton).click()
+      .sleep(3000) 
+      .elementByXPath(appSelectors.HighQualityButton).click()
+      .elementByXPath(appSelectors.MusicQualityTypeButton)
+      .text().should.become('High');
+  });
+  it("should press on Very High Music Quality button and check if the Streaming quality successfully changed", async  function () {
+    return driver
+      .sleep(10000)
+      .elementByXPath(appSelectors.MusicQualityTypeButton).click()
+      .sleep(3000) 
+      .elementByXPath(appSelectors.VeryHighQualityButton).click()
+      .elementByXPath(appSelectors.MusicQualityTypeButton)
+      .text().should.become('Very high');
   });
 
 });  
