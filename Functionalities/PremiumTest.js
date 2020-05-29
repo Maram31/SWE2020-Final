@@ -16,8 +16,8 @@ describe("SearchPage Test", function () {
     require("../helpers/logging").configure(driver);
     var desired =_.clone(require("../helpers/caps").android);
     desired.automationName= "UiAutomator2",
-    desired.appPackage= "com.spotify.lite",
-    desired.appActivity= "com.spotify.lite.features.main.MainActivity" 
+    desired.appPackage= "com.spotify.music",
+    desired.appActivity= "com.spotify.music.main.MainActivity" 
 
     return driver
       .init(desired)

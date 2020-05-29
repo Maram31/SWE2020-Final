@@ -1,8 +1,8 @@
 exports.android = {
   browserName: '',
   platformName: 'Android',
-  platformVersion: '7',
-  deviceName: 'Pixel 2 API 24',
+  platformVersion: '9',
+  deviceName: '32009259b47b35f5',
   appActivity: undefined // will be set later
 };
 
@@ -30,8 +30,8 @@ exports.androidHA = {
 exports.androidAS = {
   browserName: '',
   platformName: 'Android',
-  platformVersion: '7',
-  deviceName: 'Pixel 2 API 24',
+  platformVersion: '9',
+  deviceName: 'Pixel 3a API 28',
   appActivity: undefined // will be set later
 };
 
