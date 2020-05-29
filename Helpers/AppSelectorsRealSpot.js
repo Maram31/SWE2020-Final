@@ -151,13 +151,16 @@ exports.NextButtonXpath='//*[@id="main"]/div/div[3]/div[3]/footer/div/div[2]/div
 exports.PreviousButtonXpath='//*[@id="main"]/div/div[3]/div[3]/footer/div/div[2]/div/div[1]/div[2]/button'
 exports.EnableShuffleButtonXpath='//*[@id="main"]/div/div[3]/div[3]/footer/div/div[2]/div/div[1]/div[1]/button'
 exports.EnableRepeatButtonXpath='//*[@id="main"]/div/div[3]/div[3]/footer/div/div[2]/div/div[1]/div[5]/button'
+
 exports.PlaybackBarProgressTime1Xpath='//*[@id="main"]/div/div[3]/div[3]/footer/div/div[2]/div/div[2]/div[1]'
 exports.PlaybackBarProgressTime2Xpath='//*[@id="main"]/div/div[3]/div[3]/footer/div/div[2]/div/div[2]/div[3]'
 exports.ProgressBarXpath='//*[@id="main"]/div/div[3]/div[3]/footer/div/div[2]/div/div[2]/div[2]/div'
+
 exports.PlayQueueButtonXpath='//*[@id="main"]/div/div[3]/div[3]/footer/div/div[3]/div/div/div[1]/div/button'
 exports.ExtraControlsButtonXpath='//*[@id="main"]/div/div[3]/div[3]/footer/div/div[3]/div/div/div[2]'
 exports.MuteButtonXpath='//*[@id="main"]/div/div[3]/div[3]/footer/div/div[3]/div/div/div[3]/button'
 exports.VolumeProgressBarXpath='//*[@id="main"]/div/div[3]/div[3]/footer/div/div[3]/div/div/div[3]/div/div/div/div'
+
 exports.SongNameButtonXpath='//*[@id="main"]/div/div[3]/div[3]/footer/div/div[1]/div/div[2]/div[1]'
 exports.ArtistNameButtonXpath='//*[@id="main"]/div/div[3]/div[3]/footer/div/div[1]/div/div[2]/div[2]'
 exports.LikeSongButtonXpath='//*[@id="main"]/div/div[3]/div[3]/footer/div/div[1]/div/div[3]/button'

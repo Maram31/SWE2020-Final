@@ -8,30 +8,46 @@ var title;
 describe('MusicBarTest', function(){
     this.timeout('1500000000');
     var Checkstring;
-    beforeEach('Open the account and go to webplayer page',async function(){
+    var PrevSong;
+    var CurrentSong;
+    before('Open the account and go to webplayer page',async function(){
         await driver.get("https://www.spotify.com/eg-en/");
-        await driver.sleep(5000);
+        await driver.sleep(10000);
         title= await driver.getTitle();
         expect(title).to.equal('Music for everyone - Spotify');
         await (await driver.findElement(By.xpath(Selectors.SignInbuttonXbath))).click();
-        await driver.sleep(5000);
+        await driver.sleep(10000);
         title= await driver.getTitle();
         expect(title).to.equal('Login - Spotify');
         await driver.findElement(By.id(Selectors.EmailID)).sendKeys(TestPerson.Email);
         await driver.findElement(By.id(Selectors.PasswordID)).sendKeys(TestPerson.Password);
         await driver.findElement(By.css(Selectors.RememberMeCss)).click();
         await driver.findElement(By.id(Selectors.LoginID)).click();
-        await driver.sleep(5000);
+        await driver.sleep(20000);
         var title = await driver.getTitle();
         expect(title).to.equal('Account overview - Spotify');
         await driver.findElement(By.xpath(Selectors.WebPlayerFooterButtonXpath)).click();
-        await driver.sleep(5000);
+        await driver.sleep(20000);
         var title = await driver.getTitle();
-        expect(title).to.equal('Spotify - Web Player: Music for everyone');
+        expect(title).to.equal('Spotify – Home');
+        await driver.sleep(20000);
     });
 
-    it('Open profile and go to Set Password page',async function(){
-        await driver.sleep(5000);
+    it('Test play button',async function(){
+        await driver.findElement(By.xpath(Selectors.PlayButtonXpath)).click();
+        await driver.sleep(20000); 
+        Checkstring = await driver.findElement(By.xpath(Selectors.PlaybackBarProgressTime1Xpath)).getText();
+        expect(Checkstring).to.not.equal('0:00');
+        await driver.sleep(5000); 
+    });
+    
+    it('Test next button',async function(){
+        PrevSong = await driver.findElement(By.xpath(Selectors.SongNameButtonXpath)).getText();
+        await driver.findElement(By.xpath(Selectors.NextButtonXpath)).click();
+        await driver.sleep(20000);
+        CurrentSong = await driver.findElement(By.xpath(Selectors.SongNameButtonXpath)).getText(); 
+        expect(Checkstring).to.not.equal(PrevSong);
+        await driver.sleep(5000); 
     });
   
 
