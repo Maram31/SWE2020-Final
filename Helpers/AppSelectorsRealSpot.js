@@ -167,3 +167,8 @@ exports.LikeSongButtonXpath='//*[@id="main"]/div/div[3]/div[3]/footer/div/div[1]
 exports.RemoveSongButtonXpath='//*[@id="main"]/div/div[3]/div[3]/footer/div/div[1]/div/div[4]/button'
 exports.NowPlayingPipToggleButtonXpath='//*[@id="main"]/div/div[3]/div[3]/footer/div/div[1]/div/div[5]'
 
+//Artist Page Selectors
+exports.ArtistNameLabelXpath='//*[@id="main"]/div/div[3]/div[4]/div[1]/div/div[2]/section[1]/div[1]/div[5]/span[2]/h1'
+
+//Play Queue Selectors
+exports.PlayQueueLabelXpath='//*[@id="main"]/div/div[3]/div[4]/div[1]/div/div[2]/section[1]/h1'

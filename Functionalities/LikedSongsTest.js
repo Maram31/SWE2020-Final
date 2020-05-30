@@ -194,6 +194,6 @@ describe('MusicBarTest', function(){
     });
     Sometimes the button disappears
     */
-
+   
  after(async () => await driver.quit());
 });
