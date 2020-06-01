@@ -165,10 +165,35 @@ exports.SongNameButtonXpath='//*[@id="main"]/div/div[3]/div[3]/footer/div/div[1]
 exports.ArtistNameButtonXpath='//*[@id="main"]/div/div[3]/div[3]/footer/div/div[1]/div/div[2]/div[2]'
 exports.LikeSongButtonXpath='//*[@id="main"]/div/div[3]/div[3]/footer/div/div[1]/div/div[3]/button'
 exports.RemoveSongButtonXpath='//*[@id="main"]/div/div[3]/div[3]/footer/div/div[1]/div/div[4]/button'
-exports.NowPlayingPipToggleButtonXpath='//*[@id="main"]/div/div[3]/div[3]/footer/div/div[1]/div/div[5]'
+exports.NowPlayingPipToggleButtonXpath='//*[@id="main"]/div/div[3]/div[3]/footer/div/div[1]/div/div[4]/button'
 
 //Artist Page Selectors
 exports.ArtistNameLabelXpath='//*[@id="main"]/div/div[3]/div[4]/div[1]/div/div[2]/section[1]/div[1]/div[5]/span[2]/h1'
 
 //Play Queue Selectors
 exports.PlayQueueLabelXpath='//*[@id="main"]/div/div[3]/div[4]/div[1]/div/div[2]/section[1]/h1'
+
+//Liked Songs Selectors
+exports.LikedSongsButtonXpath='//*[@id="main"]/div/div[3]/div[2]/nav/div[2]/div/div/div[2]/a'
+exports.LikedSongsLabelXpath='//*[@id="main"]/div/div[3]/div[4]/div[1]/div/div[2]/section[1]/div[1]/div[5]/span/h1'
+exports.PlayButtonInLikedSongsXpath='//*[@id="main"]/div/div[3]/div[4]/div[1]/div/div[2]/section[1]/div[3]/div/button'
+
+//Songs Options Selectors
+exports.MoreOptionsButtonXpath='//*[@id="main"]/div/div[3]/div[4]/div[1]/div/div[2]/section[1]/div[4]/section/ol/div/div/li/div[3]'
+exports.StartRadioOptionXpath='//*[@id="main"]/div/nav[1]/div[1]'
+exports.LikedSongsOptionXpath='//*[@id="main"]/div/nav[1]/div[2]'
+exports.QueueOptionXpath='//*[@id="main"]/div/nav[1]/div[3]'
+exports.PlaylistOptionXpath='//*[@id="main"]/div/nav[1]/div[4]'
+exports.CopyLinkOptionXpath='//*[@id="main"]/div/nav[1]/div[5]'
+
+exports.SearchButtonXpath='//*[@id="main"]/div/div[3]/div[2]/nav/ul/li[2]/div/a'
+exports.SearchBarXpath='//*[@id="main"]/div/div[3]/div[1]/header/div[3]/div/div/input'
+exports.SongBoxXpath='//*[@id="searchPage"]/div/div/section[2]/div/div[2]/div[1]/div/div/div[2]/button'
+
+exports.AlbumLabelXpath='//*[@id="main"]/div/div[3]/div[4]/div[1]/div/div[2]/section[1]/div[1]/div[5]/h2'
+
+//Album Page Selectors
+exports.PlayButtonInAlpumPageXpath='//*[@id="main"]/div/div[3]/div[4]/div[1]/div/div[2]/section[1]/div[3]/div/button[1]'
+exports.LikeButtonInAlpumPageXpath='//*[@id="main"]/div/div[3]/div[4]/div[1]/div/div[2]/section[1]/div[3]/div/button[2]'
+exports.MoreOptionsInAlpumPageXpath='//*[@id="main"]/div/div[3]/div[4]/div[1]/div/div[2]/section[1]/div[3]/div/div/button'
+exports.SaveToLibOption='//*[@id="main"]/div/nav[2]/div[2]'

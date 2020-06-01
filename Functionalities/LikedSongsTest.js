@@ -32,168 +32,78 @@ describe('MusicBarTest', function(){
         title = await driver.getTitle();
         expect(title).to.equal('Spotify');
         await driver.sleep(10000);
+        await driver.findElement(By.xpath(Selectors.LikedSongsButtonXpath)).click();
+        await driver.sleep(20000); 
+        Checkstring = await driver.findElement(By.xpath(Selectors.LikedSongsLabelXpath)).getText();
+        expect(Checkstring).to.equal('Liked Songs');
     });
 
-    it('Test play button',async function(){
-        await driver.findElement(By.xpath(Selectors.PlayButtonXpath)).click();
+    it('Search for a song then play it',async function(){
+        await driver.findElement(By.xpath(Selectors.SearchButtonXpath)).click();
+        await driver.sleep(20000);
+        await driver.findElement(By.xpath(Selectors.SearchBarXpath)).sendKeys('baby shark');
+        await driver.sleep(20000);
+        await driver.findElement(By.xpath('//*[@id="main"]/div/div[3]/div[4]/div[1]/div/div[2]/div/div/div/section[2]/div/div[2]/div[1]/div/div/div[2]/button')).click();
+        await driver.sleep(20000);
+        await driver.findElement(By.xpath(Selectors.LikedSongsButtonXpath)).click();
         await driver.sleep(20000); 
-        Checkstring = await driver.findElement(By.xpath(Selectors.PlaybackBarProgressTime1Xpath)).getText();
-        expect(Checkstring).to.not.equal('0:00');
-        await driver.sleep(5000); 
+        Checkstring = await driver.findElement(By.xpath(Selectors.LikedSongsLabelXpath)).getText();
+        expect(Checkstring).to.equal('Liked Songs');
     });
     
-    it('Test next button',async function(){
-        PrevSong = await driver.findElement(By.xpath(Selectors.SongNameButtonXpath)).getText();
-        await driver.findElement(By.xpath(Selectors.NextButtonXpath)).click();
-        await driver.sleep(20000);
-        CurrentSong = await driver.findElement(By.xpath(Selectors.SongNameButtonXpath)).getText(); 
-        expect(CurrentSong).to.not.equal(PrevSong);
-        await driver.sleep(5000); 
-    });
-
-    it('Test previous button',async function(){
-        await driver.findElement(By.xpath(Selectors.PreviousButtonXpath)).click();
-        await driver.sleep(20000);
-        CurrentSong = await driver.findElement(By.xpath(Selectors.SongNameButtonXpath)).getText(); 
-        expect(CurrentSong).to.equal(PrevSong);
-        await driver.sleep(5000); 
-    });
-
-    it('Test pressing artist name',async function(){
-        Checkstring=await driver.findElement(By.xpath(Selectors.ArtistNameButtonXpath)).getText();
-        await driver.findElement(By.xpath(Selectors.ArtistNameButtonXpath)).click();
-        await driver.sleep(10000);
-        title = await driver.findElement(By.xpath(Selectors.ArtistNameLabelXpath)).getText(); 
-        expect(title).to.equal(Checkstring);
-        await driver.sleep(5000);
-        await driver.navigate().back();
-        await driver.sleep(10000);
-        await driver.navigate().refresh();
-        await driver.sleep(10000);
-        title = await driver.getTitle();
-        expect(title).to.equal('Spotify');
-        await driver.sleep(20000);
-
-    });
-
-    it('Test pressing song name',async function(){
-        Checkstring=await driver.findElement(By.xpath(Selectors.SongNameButtonXpath)).getText();
-        await driver.findElement(By.xpath(Selectors.SongNameButtonXpath)).click();
-        await driver.sleep(10000);
-        title = await driver.findElement(By.xpath("//*[contains(text(),'" + Checkstring + "')]")).getText();
-        expect(title).to.equal(Checkstring);
-        await driver.sleep(5000);
-        await driver.navigate().back();
-        await driver.sleep(10000);
-        await driver.navigate().refresh();
-        await driver.sleep(10000);
-        title = await driver.getTitle();
-        expect(title).to.equal('Spotify');
-        await driver.sleep(20000);
-    });
-
     it('Test save to liked songs',async function(){
         await driver.findElement(By.xpath(Selectors.LikeSongButtonXpath)).click();
+        await driver.sleep(20000);
+        Checkstring=await driver.findElement(By.xpath(Selectors.LikeSongButtonXpath)).getAttribute("title");
+        expect(Checkstring).to.equal('Remove from your Liked Songs');
+        Checkstring=await driver.findElement(By.xpath(Selectors.SongNameButtonXpath)).getText();
         await driver.sleep(10000);
-        Checkstring=await driver.findElement(By.xpath(Selectors.LikeSongButtonXpath)).GetAttribute("title");
-        expect(Checkstring).to.equal('Save to your Liked Songs'); 
+        CurrentSong=await driver.findElement(By.xpath('//*[@id="main"]/div/div[3]/div[4]/div[1]/div/div[2]/section[1]/div[4]/section/ol/div[1]/div/li/div[2]/div/div[1]')).getText();
+        expect(Checkstring).to.equal(CurrentSong);
     });
 
     it('Test remove from liked songs',async function(){
         await driver.findElement(By.xpath(Selectors.LikeSongButtonXpath)).click();
+        await driver.sleep(20000);
+        Checkstring=await driver.findElement(By.xpath(Selectors.LikeSongButtonXpath)).getAttribute("title");
+        expect(Checkstring).to.equal('Save to your Liked Songs');
+        Checkstring=await driver.findElement(By.xpath(Selectors.SongNameButtonXpath)).getText();
         await driver.sleep(10000);
-        Checkstring=await driver.findElement(By.xpath(Selectors.LikeSongButtonXpath)).GetAttribute("title");
+        CurrentSong=await driver.findElement(By.xpath('//*[@id="main"]/div/div[3]/div[4]/div[1]/div/div[2]/section[1]/div[4]/section/ol/div[1]/div/li/div[2]/div/div[1]')).getText();
+        expect(Checkstring).to.not.equal(CurrentSong);
+    });
+
+    it('Test play button',async function(){
+        await driver.findElement(By.xpath(Selectors.PlayButtonInLikedSongsXpath)).click();
+        await driver.sleep(20000);
+        Checkstring = await driver.findElement(By.xpath(Selectors.PlaybackBarProgressTime1Xpath)).getText();
+        expect(Checkstring).to.not.equal('0:00');
+        await driver.sleep(5000); 
+    });
+
+    it('Search for a song then play it',async function(){
+        await driver.findElement(By.xpath(Selectors.SearchButtonXpath)).click();
+        await driver.sleep(20000);
+        await driver.findElement(By.xpath(Selectors.SearchBarXpath)).sendKeys('baby shark');
+        await driver.sleep(20000);
+        await driver.findElement(By.xpath('//*[@id="main"]/div/div[3]/div[4]/div[1]/div/div[2]/div/div/div/section[2]/div/div[2]/div[1]/div/div/div[2]/button')).click();
+        await driver.sleep(20000);
+        await driver.findElement(By.xpath(Selectors.LikedSongsButtonXpath)).click();
+        await driver.sleep(20000); 
+        Checkstring = await driver.findElement(By.xpath(Selectors.LikedSongsLabelXpath)).getText();
+        expect(Checkstring).to.equal('Liked Songs');
+        await driver.findElement(By.xpath(Selectors.LikeSongButtonXpath)).click();
+        await driver.sleep(20000);
+        Checkstring=await driver.findElement(By.xpath(Selectors.LikeSongButtonXpath)).getAttribute("title");
         expect(Checkstring).to.equal('Remove from your Liked Songs');
     });
 
-    it('Test enable repeat button',async function(){
-        await driver.findElement(By.xpath(Selectors.EnableRepeatButtonXpath)).click();
+    it('Test unlike option',async function(){
+        await driver.findElement(By.xpath(Selectors.MoreOptionsButtonXpath)).click();
         await driver.sleep(10000);
-        Checkstring=await driver.findElement(By.xpath(Selectors.EnableRepeatButtonXpath)).GetAttribute("title");
-        expect(Checkstring).to.equal('Enable repeat');
-    });
-
-    it('Test enable shuffle button',async function(){
-        await driver.findElement(By.xpath(Selectors.EnableShuffleButtonXpath)).click();
-        await driver.sleep(10000);
-        Checkstring=await driver.findElement(By.xpath(Selectors.EnableShuffleButtonXpath)).GetAttribute("title");
-        expect(Checkstring).to.equal('Enable shuffle');        
-    });
-
-    it('Test disable repeat button',async function(){
-        await driver.findElement(By.xpath(Selectors.EnableRepeatButtonXpath)).click();
-        await driver.sleep(10000);
-        Checkstring=await driver.findElement(By.xpath(Selectors.EnableRepeatButtonXpath)).GetAttribute("title");
-        expect(Checkstring).to.equal('Disable repeat');
-    });
-
-    it('Test disable shuffle button',async function(){
-        await driver.findElement(By.xpath(Selectors.EnableShuffleButtonXpath)).click();
-        await driver.sleep(10000);
-        Checkstring=await driver.findElement(By.xpath(Selectors.EnableShuffleButtonXpath)).GetAttribute("title");
-        expect(Checkstring).to.equal('Disable shuffle');        
-    });
-
-    it('Test mute button',async function(){
-        await driver.findElement(By.xpath(Selectors.MuteButtonXpath)).click();
-        await driver.sleep(10000);
-        Checkstring=await driver.findElement(By.xpath(Selectors.MuteButtonXpath)).GetAttribute("aria-label");
-        expect(Checkstring).to.equal('Mute');        
-    });
-
-    it('Test unmute button',async function(){
-        await driver.findElement(By.xpath(Selectors.MuteButtonXpath)).click();
-        await driver.sleep(10000);
-        Checkstring=await driver.findElement(By.xpath(Selectors.MuteButtonXpath)).GetAttribute("aria-label");
-        expect(Checkstring).to.equal('Unmute');        
-    });
-
-    it('Test play queue button',async function(){
-        await driver.findElement(By.xpath(Selectors.PlayQueueButtonXpath)).click();
-        await driver.sleep(10000);
-        title = await driver.findElement(By.xpath(Selectors.PlayQueueLabelXpath)).getText();
-        expect(title).to.equal('Play Queue'); 
-    });
-
-    it('Test enable now playing pip toggle button',async function(){
-        await driver.findElement(By.xpath(Selectors.NowPlayingPipToggleButtonXpath)).click();
-        await driver.sleep(10000);
-        Checkstring=await driver.findElement(By.xpath(Selectors.NowPlayingPipToggleButtonXpath)).GetAttribute("class");
-        expect(Checkstring).to.equal('picture-in-picture-button control-button control-button--active');        
-    });
-
-    it('Test disable now playing pip toggle button',async function(){
-        await driver.findElement(By.xpath(Selectors.NowPlayingPipToggleButtonXpath)).click();
-        await driver.sleep(10000);
-        Checkstring=await driver.findElement(By.xpath(Selectors.NowPlayingPipToggleButtonXpath)).GetAttribute("class");
-        expect(Checkstring).to.equal('picture-in-picture-button control-button');        
-    });
-    /*
-    it('Test remove button',async function(){
-        PrevSong = await driver.findElement(By.xpath(Selectors.SongNameButtonXpath)).getText();
-        await driver.findElement(By.xpath(Selectors.RemoveSongButtonXpath)).click();
+        await driver.findElement(By.xpath(Selectors.LikedSongsOptionXpath)).click();
         await driver.sleep(20000);
-        CurrentSong = await driver.findElement(By.xpath(Selectors.SongNameButtonXpath)).getText(); 
-        expect(CurrentSong).to.not.equal(PrevSong);
-        await driver.sleep(5000); 
     });
-
-    it('Test pressing remove button then prev button',async function(){
-        PrevSong = await driver.findElement(By.xpath(Selectors.SongNameButtonXpath)).getText();
-        await driver.findElement(By.xpath(Selectors.RemoveSongButtonXpath)).click();
-        await driver.sleep(20000);
-        CurrentSong = await driver.findElement(By.xpath(Selectors.SongNameButtonXpath)).getText(); 
-        expect(CurrentSong).to.not.equal(PrevSong);
-
-        await driver.sleep(10000); 
-        await driver.findElement(By.xpath(Selectors.PreviousButtonXpath)).click();
-        await driver.sleep(20000);
-        CurrentSong = await driver.findElement(By.xpath(Selectors.SongNameButtonXpath)).getText(); 
-        expect(CurrentSong).to.not.equal(PrevSong);
-        await driver.sleep(5000); 
-    });
-    Sometimes the button disappears
-    */
-   
+  
  after(async () => await driver.quit());
 });
