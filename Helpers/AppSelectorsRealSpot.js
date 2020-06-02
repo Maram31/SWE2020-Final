@@ -171,6 +171,7 @@ exports.NowPlayingPipToggleButtonXpath='//*[@id="main"]/div/div[3]/div[3]/footer
 //Webplayer
 exports.LibraryLinkText = 'Your Library'
 exports.FirstPlaylistXpath = "//*[@id='main']/div/div[2]/div[4]/div[1]/div/div[2]/section/section/div/section[1]/div/div[2]/div/div/div[4]"
-exports.SecondSongXpath ="//*[@id='main']/div/div[2]/div[4]/div[1]/div/div[2]/section[1]/div[4]/section/ol/div[2]/div/li/div[3]"
+exports.SecondSongXpath ="//*[@id='main']/div/div[2]/div[4]/div[1]/div/div[2]/section[1]/div[4]/section/ol/div[2]/div/li/div[3]/div/div/button"
 exports.SecondSongAddToPlaylistXpath ="//*[@id='main']/div/nav[1]/div[4]"
 exports.AddToSecondPlaylistXpath = "//*[@id='main']/div/div[3]/div/div[2]/div[3]/div/div/div/div"
+exports.SecondSongRemoveFromPlaylistXpath = "//*[@id='main']/div/nav[1]/div[5]"
