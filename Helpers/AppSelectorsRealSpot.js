@@ -132,7 +132,11 @@ exports.ChangePasswordNewErrorXpath = '//*[@id="change_password"]/div[2]/div/div
 exports.GoToWebPlayerFooterXpath = '//a[contains(@href, "https://www.spotify.com/eg-en/redirect/webplayerlink/")]'
 exports.GoToWebPlayerHeaderXpath = '//a[contains(text(),"Web player")]'
 
-exports.CreateNewPlaylistCss = '.CreatePlaylistButton__svg'
+exports.PopPlaylistCreatedXpath = "//span[contains(.,'Pop')]"
+exports.CreateNewPlaylistXpath = "(//button[@type='button'])[2]"
+exports.AddToPlaylistButton = "//div[@id='main']/div/nav/div[4]"
+exports.ChoosePlaylistToAddToXpath = "//div[@id='main']/div/div[3]/div/div[2]/div[2]/div/div/div/div/div/div/div[2]/div"
+
 exports.CancelCreateNewPlaylistXpath = "(//button[@type='button'])[5]"
 exports.ConfirmCreateNewPlaylistXpath = "(//button[@type='button'])[6]"
 exports.InputNewPlaylistNameCss=".inputBox-input"
@@ -164,3 +168,9 @@ exports.LikeSongButtonXpath='//*[@id="main"]/div/div[3]/div[3]/footer/div/div[1]
 exports.RemoveSongButtonXpath='//*[@id="main"]/div/div[3]/div[3]/footer/div/div[1]/div/div[4]/button'
 exports.NowPlayingPipToggleButtonXpath='//*[@id="main"]/div/div[3]/div[3]/footer/div/div[1]/div/div[5]'
 
+//Webplayer
+exports.LibraryLinkText = 'Your Library'
+exports.FirstPlaylistXpath = "//*[@id='main']/div/div[2]/div[4]/div[1]/div/div[2]/section/section/div/section[1]/div/div[2]/div/div/div[4]"
+exports.SecondSongXpath ="//*[@id='main']/div/div[2]/div[4]/div[1]/div/div[2]/section[1]/div[4]/section/ol/div[2]/div/li/div[3]"
+exports.SecondSongAddToPlaylistXpath ="//*[@id='main']/div/nav[1]/div[4]"
+exports.AddToSecondPlaylistXpath = "//*[@id='main']/div/div[3]/div/div[2]/div[3]/div/div/div/div"
