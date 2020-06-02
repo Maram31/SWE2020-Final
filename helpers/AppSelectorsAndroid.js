@@ -36,10 +36,13 @@ exports.SpotifyLogoID=""
 exports.SettingButton="//android.widget.ImageButton[@content-desc='Settings']";
 exports.SettingButtonID="abaf6fd7-47ba-4ffb-aa56-73ad2bcb7101";
 exports.LogOutInSettingsO2ButtonID="";
+exports.SearchButtonID="com.spotify.music:id/search_tab";
+
+exports.SearchFieldID="com.spotify.music:id/find_search_field";
+
 //Create playlist
 exports.CreatePlaylistID=""
 exports.CreatePlaylistTextFieldID=""
 exports.CreatePlaylistSetID=""
 exports.CreatePlaylistCancelID=""
 exports.CreatedPlaylistNameID=""
-
