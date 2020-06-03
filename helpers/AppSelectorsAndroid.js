@@ -39,6 +39,23 @@ exports.LogOutInSettingsO2ButtonID="";
 exports.SearchButtonID="com.spotify.music:id/search_tab";
 
 exports.SearchFieldID="com.spotify.music:id/find_search_field";
+exports.PlayButtonXpath="/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout[1]/android.view.ViewGroup/android.widget.FrameLayout/androidx.recyclerview.widget.RecyclerView/android.widget.FrameLayout[1]/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.Button"
+exports.MuiscBarID="com.spotify.music:id/track_title"
+exports.LikeSongButtonID="com.spotify.music:id/heart_button"
+exports.DropDownMenu="com.spotify.music:id/context_menu_button"
+exports.LikeSongOption="android:id/text1"
+exports.HideSongOptionXpath="//*[contains(@text, 'Hide this song')]"
+exports.AddToPlaylistOptionXpath="//*[contains(@text, 'Add to Playlist')]"
+exports.HideSongButton="com.spotify.music:id/ban_button"
+
+exports.PlaylistNameXpath="//*[contains(@text, 'Heba')]"
+
+exports.NextSongButton="com.spotify.music:id/next_button"
+exports.PrevSongButton="com.spotify.music:id/previous_button"
+exports.PlaySongButton="com.spotify.music:id/play_pause_button"
+
+
+exports.ToastID="com.spotify.music:id/snackbar_text"
 
 //Create playlist
 exports.CreatePlaylistID=""
@@ -46,3 +63,8 @@ exports.CreatePlaylistTextFieldID=""
 exports.CreatePlaylistSetID=""
 exports.CreatePlaylistCancelID=""
 exports.CreatedPlaylistNameID=""
+
+//Login Selectors
+exports.LogInButtonID="//*[contains(@text, 'LOG IN')]"
+exports.EmailLogInID="com.spotify.music:id/username_text"
+exports.PasswordLogInID="com.spotify.music:id/password_text"
