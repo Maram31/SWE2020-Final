@@ -33,21 +33,22 @@ describe("Choosing Music Quality Test", function () {
     afterEach( async function () {
         allPassed = allPassed && this.currentTest.state === 'passed';
     });
-    /*it("should Login successfully", async  function () {
+    it("should Login successfully", async  function () {
       return driver
-        .sleep(10000)
-          .elementByXPath("").click()
-          .sleep(3000)  
-          .elementByXPath("").sendKeys("aya.sameh.99@gmail.com")
-          .elementByXPath("").sendKeys("")
-          .elementByXPath("").click()
-          .elementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[1]/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout[1]/android.widget.TextView[2]")
-          .text().should.become('Made for you');
-    });*/
+      .sleep(10000)
+      .elementByXPath(appSelectors.LogInButtonID).click()
+      .sleep(2000)
+      .elementById(appSelectors.EmailLogInID).sendKeys("hebanassif19@gmail.com")
+      .elementById(appSelectors.PasswordLogInID).sendKeys("Heba1234")
+      .elementByXPath(appSelectors.LogInButtonID).click()
+      .sleep(20000)
+      .elementById(appSelectors.SpotifyLogoHomeScreentitleId)
+      .text().should.become('Good afternoon');
+    });
 
   it("should press on Setting button", async  function () {
     return driver
-	    .sleep(20000)
+	    .sleep(5000)
         .elementByXPath(appSelectors.SettingButton).click()
         .sleep(3000)  
         .elementById(appSelectors.SettingLabelID)

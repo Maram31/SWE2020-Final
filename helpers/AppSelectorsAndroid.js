@@ -17,7 +17,7 @@ exports.AboutButton="/hierarchy/android.widget.FrameLayout/android.widget.Linear
 //Audio settings page //ALL in Xpath and Id
 exports.SettingLabelID="com.spotify.music:id/glue_toolbar_title";
 exports.MusicQualityTypeButtonClass="android.widget.Spinner";
-exports.MusicQualityTypeTextButton="/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[3]/android.widget.ListView/android.widget.FrameLayout[5]/android.widget.LinearLayout/android.widget.LinearLayout[2]/android.widget.Spinner/android.widget.TextView";
+exports.MusicQualityTypeTextButton="/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[3]/android.widget.ListView/android.widget.FrameLayout[6]/android.widget.LinearLayout/android.widget.LinearLayout[2]/android.widget.Spinner/android.widget.TextView";
 
 
 exports.AutomaticQualityButton="/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.ListView/android.widget.CheckedTextView[1]";
@@ -29,7 +29,7 @@ exports.VeryHighQualityButton="/hierarchy/android.widget.FrameLayout/android.wid
 //////////////////////////
 //HomePage all by xpath excepts those that written at the end of the name ID
 exports.LibraryIconID=""
-exports.SpotifyLogoHomeScreen="";
+exports.SpotifyLogoHomeScreentitleId="com.spotify.music:id/title";
 exports.HomeButtonID="";
 exports.PremiumButtonID="com.spotify.music:id/premium_tab";
 exports.SpotifyLogoID=""

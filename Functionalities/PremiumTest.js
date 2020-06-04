@@ -33,17 +33,18 @@ describe("Premium Page Test", function () {
     afterEach( async function () {
         allPassed = allPassed && this.currentTest.state === 'passed';
     });
-    /*it("should Login successfully", async  function () {
+    it("should Login successfully", async  function () {
       return driver
         .sleep(10000)
-          .elementByXPath("").click()
-          .sleep(3000)  
-          .elementByXPath("").sendKeys("aya.sameh.99@gmail.com")
-          .elementByXPath("").sendKeys("")
-          .elementByXPath("").click()
-          .elementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[1]/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout[1]/android.widget.TextView[2]")
-          .text().should.become('Made for you');
-    });*/
+        .elementByXPath(appSelectors.LogInButtonID).click()
+        .sleep(2000)
+        .elementById(appSelectors.EmailLogInID).sendKeys("hebanassif19@gmail.com")
+        .elementById(appSelectors.PasswordLogInID).sendKeys("Heba1234")
+        .elementByXPath(appSelectors.LogInButtonID).click()
+        .sleep(20000)
+        .elementById(appSelectors.SpotifyLogoHomeScreentitleId)
+        .text().should.become('Good afternoon');
+    });
   it("should press on Premium button", async  function () {
     return driver
       .sleep(20000)
@@ -56,7 +57,7 @@ describe("Premium Page Test", function () {
     return driver
       .sleep(5000)
       .elementByXPath(appSelectors.GetPremiumButton).click()
-      .sleep(10000)  
+      .sleep(20000)  
       .elementByXPath(appSelectors.GetPremiumPriceText)
       .text().should.become('49.99 EGP / الشهر بعد انتهاء النسخة التجريبية')
       .sleep(3000)  
@@ -77,7 +78,7 @@ describe("Premium Page Test", function () {
     return driver
       .sleep(5000)
       .elementByXPath(appSelectors.GetPremiumIndividualButton).click()
-      .sleep(10000)  
+      .sleep(20000)  
       .elementByXPath(appSelectors.GetPremiumPriceText)
       .text().should.become('49.99 EGP / الشهر بعد انتهاء النسخة التجريبية')
       .sleep(3000)  
@@ -87,7 +88,7 @@ describe("Premium Page Test", function () {
     return driver
       .sleep(5000)
       .elementByXPath(appSelectors.GetPremiumFamilyButton).click()
-      .sleep(10000)  
+      .sleep(20000)  
       .elementByXPath(appSelectors.GetPremiumPriceText)
       .text().should.become('79.99 EGP / الشهر بعد انتهاء النسخة التجريبية')
       .sleep(3000)   
