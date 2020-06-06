@@ -173,11 +173,34 @@ exports.NowPlayingPipToggleButtonXpath='//*[@id="main"]/div/div[3]/div[3]/footer
 
 //Webplayer
 exports.LibraryLinkText = 'Your Library'
-exports.FirstPlaylistXpath = "//*[@id='main']/div/div[2]/div[4]/div[1]/div/div[2]/section/section/div/section[1]/div/div[2]/div/div/div[4]"
-exports.SecondSongXpath ="//*[@id='main']/div/div[2]/div[4]/div[1]/div/div[2]/section[1]/div[4]/section/ol/div[2]/div/li/div[3]/div/div/button"
-exports.SecondSongAddToPlaylistXpath ="//*[@id='main']/div/nav[1]/div[4]"
-exports.AddToSecondPlaylistXpath = "//*[@id='main']/div/div[3]/div/div[2]/div[3]/div/div/div/div"
-exports.SecondSongRemoveFromPlaylistXpath = "//*[@id='main']/div/nav[1]/div[5]"
+
+exports.UserIconXpath = '//*[@id="main"]/div/div[2]/div[1]/header/div[4]/button/figure/div'
+exports.LogoutXpath = '//*[@id="main"]/div/div[2]/div[1]/header/div[4]/ul/li[4]/button'
+
+exports.CreateNewPlaylistXpath = '//*[@id="main"]/div/div[2]/div[2]/nav/div[2]/div/div/div[1]/button'
+exports.CreateNewPlaylistTextInputXpath = '//*[@id="main"]/div/div[3]/div/div[1]/div/div/input'
+exports.ConfirmCreateNewPlaylistXpath = '//*[@id="main"]/div/div[3]/div/div[2]/div[2]/button'
+
+exports.FirstCreatedPlaylistXpath = '//*[@id="main"]/div/div[2]/div[4]/div[1]/div/div[2]/section[1]/div[1]/div[1]/div/div/div[4]'
+exports.SecondCreatedPlaylistXpath = '//*[@id="main"]/div/div[2]/div[4]/div[1]/div/div[2]/section[1]/div[1]/div[2]/div/div/div[4]'
+
+exports.CreatedPlaylistDetailsXpath = '//*[@id="main"]/div/div[2]/div[4]/div[1]/div/div[2]/section[1]/div[3]/div/div/button'
+exports.CreatedPlaylistDeleteXpath = '//*[@id="main"]/div/nav[3]/div[3]'
+exports.PlaylistDeleteButtonXpath = '//*[@id="main"]/div/div[3]/div/div/div[2]/button'
+
+exports.HomeFirstPlaylistXpath = "//*[@id='main']/div/div[2]/div[4]/div[1]/div/div[2]/section/section/div/section[1]/div/div[2]/div/div/div[4]"
+exports.HomeSixthPlaylistXpath = '//*[@id="main"]/div/div[2]/div[4]/div[1]/div/div[2]/section/section/div/section[2]/div/div[4]/div/div/div[4]'
+
+exports.FirstSongXpath = '//*[@id="main"]/div/div[2]/div[4]/div[1]/div/div[2]/section[1]/div[4]/section/ol/div[1]/div/li/div[3]'
+exports.SecondSongXpath = "//*[@id='main']/div/div[2]/div[4]/div[1]/div/div[2]/section[1]/div[4]/section/ol/div[2]/div/li/div[3]"
+exports.FourthSongXpath = '//*[@id="main"]/div/div[2]/div[4]/div[1]/div/div[2]/section[1]/div[4]/section/ol/div[4]/div/li/div[3]'
+
+exports.AddToPlaylistOptionXpath = "//*[@id='main']/div/nav[1]/div[4]"
+exports.RemoveFromPlaylistOptionXpath = '//*[@id="main"]/div/nav[1]/div[5]'
+
+exports.AddToFirstPlaylistXpath = '//*[@id="main"]/div/div[3]/div/div[2]/div[1]/div/div/div/div/div[1]/div'
+exports.AddToThirdPlaylistXpath = "//*[@id='main']/div/div[3]/div/div[2]/div[3]/div/div/div/div"
+
 exports.NowPlayingPipToggleButtonXpath='//*[@id="main"]/div/div[3]/div[3]/footer/div/div[1]/div/div[4]/button'
 
 //Artist Page Selectors
@@ -199,9 +222,12 @@ exports.QueueOptionXpath='//*[@id="main"]/div/nav[1]/div[3]'
 exports.PlaylistOptionXpath='//*[@id="main"]/div/nav[1]/div[4]'
 exports.CopyLinkOptionXpath='//*[@id="main"]/div/nav[1]/div[5]'
 
+exports.SearchIconXpath = '//*[@id="main"]/div/div[2]/div[2]/nav/ul/li[2]/a'
 exports.SearchButtonXpath='//*[@id="main"]/div/div[3]/div[2]/nav/ul/li[2]/div/a'
-exports.SearchBarXpath='//*[@id="main"]/div/div[3]/div[1]/header/div[3]/div/div/input'
+exports.SearchBarXpath='//*[@id="main"]/div/div[2]/div[1]/header/div[3]/div/div/input'
 exports.SongBoxXpath='//*[@id="searchPage"]/div/div/section[2]/div/div[2]/div[1]/div/div/div[2]/button'
+exports.SongSearchResultXpath= '//*[@id="searchPage"]/div/div/section[1]/div/div[2]/div/div/div/div[4]'
+exports.FirstSongPlaylistSearchXpath= '//*[@id="main"]/div/div[2]/div[4]/div[1]/div/div[2]/section[1]/section/ol/div[1]/div/li/div[3]'
 
 exports.AlbumLabelXpath='//*[@id="main"]/div/div[3]/div[4]/div[1]/div/div[2]/section[1]/div[1]/div[5]/h2'
 
