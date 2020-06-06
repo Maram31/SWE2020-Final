@@ -134,7 +134,16 @@ describe('PlaylistTest', function() {
 
         await driver.findElement(By.xpath(Selectors.AddToFirstPlaylistXpath)).click(); 
 
-        await driver.sleep(3000);      
+        await driver.sleep(3000);   
+        
+        await driver.findElement(By.linkText(Selectors.LibraryLinkText)).click(); 
+
+        await driver.sleep(3000);
+
+        await driver.findElement(By.xpath(Selectors.FirstCreatedPlaylistXpath)).click(); 
+
+        await driver.sleep(3000);
+
 
     }); 
     
@@ -170,6 +179,15 @@ describe('PlaylistTest', function() {
         await driver.findElement(By.xpath(Selectors.NewPlaylistConfirmXpath)).click(); 
 
         await driver.sleep(3000);    
+
+        await driver.findElement(By.linkText(Selectors.LibraryLinkText)).click(); 
+
+        await driver.sleep(3000);
+
+        await driver.findElement(By.xpath(Selectors.FirstCreatedPlaylistXpath)).click(); 
+
+        await driver.sleep(3000);
+
 
     }); 
 
