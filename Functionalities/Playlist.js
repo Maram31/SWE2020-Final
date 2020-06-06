@@ -44,12 +44,7 @@ describe('PlaylistTest', function() {
 
     });
 
-
-    it('Create playlist then delete it',async function() {
-
-        await driver.get("https://open.spotify.com/");
-        await driver.sleep(3000);
-        await driver.getCurrentUrl().then(function(URL){expect(URL).equals("https://open.spotify.com/")});
+    it('Create playlist then add song from random playlist then delete it',async function() {
 
         await driver.findElement(By.xpath(Selectors.CreateNewPlaylistXpath)).click(); 
 
@@ -62,7 +57,28 @@ describe('PlaylistTest', function() {
         await driver.findElement(By.xpath(Selectors.ConfirmCreateNewPlaylistXpath)).click(); 
 
         driver.sleep(3000);
-        
+
+        await driver.get("https://open.spotify.com/");
+        await driver.sleep(3000);
+        await driver.getCurrentUrl().then(function(URL){expect(URL).equals("https://open.spotify.com/")});
+
+        await driver.findElement(By.xpath(Selectors.HomeFirstPlaylistXpath)).click(); 
+
+        await driver.sleep(3000);
+
+        await driver.findElement(By.xpath(Selectors.PlaylistFirstSongXpath)).click(); 
+        await driver.findElement(By.xpath(Selectors.PlaylistFirstSongXpath)).click(); 
+
+        await driver.sleep(3000);
+
+        await driver.findElement(By.xpath(Selectors.AddToPlaylistOptionXpath)).click(); 
+
+        await driver.sleep(3000);
+
+        await driver.findElement(By.xpath(Selectors.AddToFirstPlaylistXpath)).click(); 
+
+        await driver.sleep(3000);      
+      
         await driver.findElement(By.linkText(Selectors.LibraryLinkText)).click(); 
 
         await driver.sleep(3000);
@@ -70,6 +86,16 @@ describe('PlaylistTest', function() {
         await driver.findElement(By.xpath(Selectors.FirstCreatedPlaylistXpath)).click(); 
 
         await driver.sleep(3000);
+
+        await driver.findElement(By.xpath(Selectors.FirstSongXpath)).click(); 
+        await driver.findElement(By.xpath(Selectors.FirstSongXpath)).click();  
+        
+        await driver.sleep(3000);
+
+        await driver.findElement(By.xpath(Selectors.RemoveFromPlaylistOptionXpath)).click(); 
+
+        await driver.sleep(3000);     
+
 
         await driver.findElement(By.xpath(Selectors.CreatedPlaylistDetailsXpath)).click(); 
         await driver.findElement(By.xpath(Selectors.CreatedPlaylistDetailsXpath)).click(); 
@@ -86,8 +112,7 @@ describe('PlaylistTest', function() {
 
     });
 
-
-    it('Select recently playlist then add song to another playlist',async function() {
+    it('Select random playlist then add song to another playlist',async function() {
 
         await driver.get("https://open.spotify.com/");
         await driver.sleep(3000);
@@ -114,7 +139,7 @@ describe('PlaylistTest', function() {
     }); 
     
 
-    it('Select popular playlist then add song to another playlist',async function() {
+    it('Select random playlist then add song to new created playlist',async function() {
 
         await driver.get("https://open.spotify.com/");
         await driver.sleep(3000);
@@ -134,7 +159,15 @@ describe('PlaylistTest', function() {
 
         await driver.sleep(3000);
 
-        await driver.findElement(By.xpath(Selectors.AddToFirstPlaylistXpath)).click(); 
+        await driver.findElement(By.xpath(Selectors.NewPlaylistXpath)).click(); 
+
+        await driver.sleep(3000);    
+
+        await driver.findElement(By.xpath(Selectors.NewPlaylistInputXpath)).sendKeys('Country'); 
+
+        await driver.sleep(3000);
+
+        await driver.findElement(By.xpath(Selectors.NewPlaylistConfirmXpath)).click(); 
 
         await driver.sleep(3000);    
 
@@ -172,7 +205,7 @@ describe('PlaylistTest', function() {
 
         await driver.sleep(3000); 
 
-    });
+    });   
 
     after(async function() {
         await driver.findElement(By.xpath(Selectors.UserIconXpath)).click(); 
@@ -184,7 +217,7 @@ describe('PlaylistTest', function() {
         await driver.sleep(3000);
 
         await driver.quit();
-        
+
     });
 
 });
