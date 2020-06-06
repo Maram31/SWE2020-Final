@@ -28,7 +28,7 @@ exports.VeryHighQualityButton="/hierarchy/android.widget.FrameLayout/android.wid
 
 //////////////////////////
 //HomePage all by xpath excepts those that written at the end of the name ID
-exports.LibraryIconID=""
+exports.LibraryIconID="com.spotify.music:id/your_library_tab"
 exports.SpotifyLogoHomeScreentitleId="com.spotify.music:id/title";
 exports.HomeButtonID="";
 exports.PremiumButtonID="com.spotify.music:id/premium_tab";
@@ -68,3 +68,13 @@ exports.CreatedPlaylistNameID=""
 exports.LogInButtonID="//*[contains(@text, 'LOG IN')]"
 exports.EmailLogInID="com.spotify.music:id/username_text"
 exports.PasswordLogInID="com.spotify.music:id/password_text"
+
+//Liked Songs Page
+exports.LikeSongIconXpath='/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[1]/android.view.ViewGroup/android.widget.FrameLayout/androidx.viewpager.widget.ViewPager/android.widget.FrameLayout/android.widget.FrameLayout[2]/android.widget.LinearLayout/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout[2]/android.widget.FrameLayout/android.widget.LinearLayout'
+exports.PlayButtonInLikeSongsID='com.spotify.music:id/button'
+exports.StopLikingSongButtonXpath='(//android.widget.ImageButton[@content-desc="Stop liking this song"])[1]'
+exports.MoreOptionsInLikeSongsXpath='(//android.widget.ImageButton[@content-desc="Show context menu"])[1]'
+exports.UnlikeOptionXpath='/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.ScrollView/android.widget.LinearLayout/android.widget.TextView[1]'
+exports.AddToPlaylist2OptionXpath='/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.ScrollView/android.widget.LinearLayout/android.widget.TextView[2]'
+
+exports.PlayAlbumXpath='/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout[1]/android.widget.LinearLayout/android.widget.Button'
