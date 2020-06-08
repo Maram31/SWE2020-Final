@@ -99,5 +99,5 @@ describe('PremiumPageTest', function(){
     }) 
    
 
- //after(async () => await driver.quit());
+ after(async () => await driver.quit());
 });
