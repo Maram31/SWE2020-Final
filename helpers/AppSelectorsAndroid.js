@@ -60,6 +60,12 @@ exports.PlaySongButton="com.spotify.music:id/play_pause_button"
 
 
 exports.ToastID="com.spotify.music:id/snackbar_text"
+exports.PlayButtonNotificationXpath='//android.widget.ImageButton[@content-desc="Play"]'
+exports.PauseButtonNotificationXpath='//android.widget.ImageButton[@content-desc="Pause"]'
+exports.OptionsID='com.spotify.music:id/glue_overflow'
+exports.ConfirmDeletePlaylistID='com.spotify.music:id/button_positive'
+exports.AddAnywayButtonID='com.spotify.music:id/button_negative'
+
 
 //Create playlist
 exports.CreatePlaylistID=""
