@@ -74,8 +74,16 @@ exports.ConfirmCreatePlaylistID='com.spotify.music:id/continue_button'
 exports.FirstPlaylistXpath='/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[1]/android.view.ViewGroup/android.widget.FrameLayout/androidx.viewpager.widget.ViewPager/android.widget.FrameLayout/android.widget.FrameLayout[2]/android.widget.LinearLayout/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout[2]/android.widget.FrameLayout/android.widget.LinearLayout'
 exports.SongOptionXpath='(//android.widget.ImageButton[@content-desc="Show context menu"])[1]'
 exports.RemoveSongFromPlaylistXpath='/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.ScrollView/android.widget.LinearLayout/android.widget.TextView[2]'
+exports.RenamePlaylistXpath='/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.ScrollView/android.widget.LinearLayout/android.widget.TextView[3]'
 exports.DeletePlaylistXpath='/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.ScrollView/android.widget.LinearLayout/android.widget.TextView[4]'
 exports.ShufflePlayButtonXpath='/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[1]/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout[1]/android.widget.LinearLayout/android.widget.Button'
+exports.CreateNewPlaylistXpath='/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[1]/android.view.ViewGroup/android.widget.FrameLayout/androidx.viewpager.widget.ViewPager/android.widget.FrameLayout/android.widget.FrameLayout[2]/android.widget.LinearLayout/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout[1]/android.widget.FrameLayout/android.widget.LinearLayout'
+exports.AddSongsID='com.spotify.music:id/button_primary'
+exports.AddFirstSongXpath='(//android.widget.ImageButton[@content-desc="Add song to playlist."])[1]'
+exports.AddSecondSongXpath='(//android.widget.ImageButton[@content-desc="Add song to playlist."])[2]'
+exports.AddThirdSongXpath='(//android.widget.ImageButton[@content-desc="Add song to playlist."])[3]'
+exports.GoBackXpath='//android.widget.ImageButton[@content-desc="Close"]'
+
 
 //Create playlist
 exports.CreatePlaylistID=""
