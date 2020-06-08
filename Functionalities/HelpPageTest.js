@@ -9,7 +9,7 @@ describe('HelpPageTest', function(){
         await driver.get("https://www.spotify.com/eg-en/");
         const titleSpotHome = await driver.getTitle();
         await driver.sleep(5000);
-        expect(titleSpotHome).to.equal('Music for everyone - Spotify');//testing that i reached the req page
+        expect(titleSpotHome).to.equal('Listening is everything - Spotify');//testing that i reached the req page
     })
     it('should press on Help button and get the new page title', async () => {
         await driver.findElement(By.xpath(Selectors.HelpPageButton)).click();
@@ -326,12 +326,7 @@ describe('HelpPageTest', function(){
     it('should press on Find Answers Button and get the new page title', async () => {
         await driver.findElement(By.xpath(Selectors.FindAnswersButton)).click();
         await driver.sleep(5000);
-        //var wind=driver.getWindowHandle();
-        //wait driver.switchTo().window("https://community.spotify.com/t5/Spotify-Answers/tkb-p/Spotify-Answers?_ga=2.27400948.97180223.1589808787-679065576.1584204532")
-        //const titleSpotReg = await driver.getTitle();
-        //expect(wind).to.equal('Spotify Answers - The Spotify Community');//testing that i reached the req page
-        //see that a new website is opened
-       //////////////////////////////////
+        //seeing manully that a new tap is opened
     }) 
     it('should press on Get Spotify Button and get the new page title', async () => {
         await driver.findElement(By.xpath(Selectors.GetSpotifyButton)).click();

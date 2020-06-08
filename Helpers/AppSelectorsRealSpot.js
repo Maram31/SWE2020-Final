@@ -77,8 +77,8 @@ exports.Get3monthFreebutton="//*[@id='HERO-0']/article/header/div/div[4]/div[1]/
 exports.ViewPlansbutton="//*[@id='HERO-0']/article/header/div/div[4]/div[2]/a";
 exports.GetStartedIndividualbutton="//*[@id='PLANS']/article/div/div[2]/div/a";
 exports.GetStartedFamilybutton="//*[@id='PLANS']/article/div/div[5]/div/a";
-
-
+exports.Loginbutton="/html/body/div[2]/div[1]/header/div/nav/ul/li[6]/a";
+exports.PremiumbuttonafterLoggingIn="//*[@id='__next']/div/div/div[1]/header/div/nav/ul/li[1]/a";
 //////////////////////////////////////////////
 //Log in Selectors
 exports.SignInbuttonXbath = "//a[contains(text(),'Log In')]";
