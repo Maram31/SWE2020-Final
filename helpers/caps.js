@@ -38,7 +38,7 @@ exports.androidAS = {
 exports.androidVirtualMM = {
   browserName: '',
   platformName: 'Android',
-  platformVersion: '9',
+  platformVersion: '10',
   deviceName: 'emulator-5554',
   appActivity: undefined // will be set later
 };
