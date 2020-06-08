@@ -264,9 +264,8 @@ describe('HelpPageTest', function(){
     }) 
     it('should press on DataSlide Button1 and find the correct slide', async () => {
         await driver.findElement(By.xpath(Selectors.DataSlideButton1)).click();
-        await driver.sleep(5000);
         await driver.findElement(By.xpath(Selectors.WatchVideoButton1))//finding a specific element on the slide
-        await driver.sleep(5000);
+        await driver.sleep(3000);
     }) 
     it('should press on Watch Video Button1 and see the video pop up', async () => {
         await driver.findElement(By.xpath(Selectors.DataSlideButton1)).click();
@@ -276,9 +275,8 @@ describe('HelpPageTest', function(){
     }) 
     it('should press on DataSlide Button2 and find the correct slide', async () => {
         await driver.findElement(By.xpath(Selectors.DataSlideButton2)).click();
-        await driver.sleep(5000);
         await driver.findElement(By.xpath(Selectors.WatchVideoButton2))//finding a specific element on the slide
-        await driver.sleep(5000);
+        await driver.sleep(3000);
     }) 
     it('should press on Watch Video Button2 and see the video pop up', async () => {
         await driver.findElement(By.xpath(Selectors.DataSlideButton2)).click();
@@ -288,9 +286,8 @@ describe('HelpPageTest', function(){
     }) 
     it('should press on DataSlide Button3 and find the correct slide', async () => {
         await driver.findElement(By.xpath(Selectors.DataSlideButton3)).click();
-        await driver.sleep(5000);
         await driver.findElement(By.xpath(Selectors.WatchVideoButton3))//finding a specific element on the slide
-        await driver.sleep(5000);
+        await driver.sleep(3000);
     }) 
     it('should press on Watch Video Button3 and see the video pop up', async () => {
         await driver.findElement(By.xpath(Selectors.DataSlideButton3)).click();
@@ -300,9 +297,8 @@ describe('HelpPageTest', function(){
     }) 
     it('should press on DataSlide Button4 and find the correct slide', async () => {
         await driver.findElement(By.xpath(Selectors.DataSlideButton4)).click();
-        await driver.sleep(5000);
         await driver.findElement(By.xpath(Selectors.WatchVideoButton4))//finding a specific element on the slide
-        await driver.sleep(5000);
+        await driver.sleep(3000);
     }) 
     it('should press on Watch Video Button4 and see the video pop up', async () => {
         await driver.findElement(By.xpath(Selectors.DataSlideButton4)).click();
@@ -312,9 +308,8 @@ describe('HelpPageTest', function(){
     }) 
     it('should press on DataSlide Button5 and find the correct slide', async () => {
         await driver.findElement(By.xpath(Selectors.DataSlideButton5)).click();
-        await driver.sleep(5000);
         await driver.findElement(By.xpath(Selectors.WatchVideoButton5))//finding a specific element on the slide
-        await driver.sleep(5000);
+        await driver.sleep(3000);
     }) 
     it('should press on Watch Video Button5 and see the video pop up', async () => {
         await driver.findElement(By.xpath(Selectors.DataSlideButton5)).click();
