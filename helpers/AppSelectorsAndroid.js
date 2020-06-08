@@ -28,7 +28,10 @@ exports.VeryHighQualityButton="/hierarchy/android.widget.FrameLayout/android.wid
 
 //////////////////////////
 //HomePage all by xpath excepts those that written at the end of the name ID
-exports.LibraryIconID=""
+exports.LibraryIconID="com.spotify.music:id/your_library_tab"
+
+exports.EditPlaylistID='com.spotify.music:id/cta_button'
+
 exports.SpotifyLogoHomeScreentitleId="com.spotify.music:id/title";
 exports.HomeButtonID="";
 exports.PremiumButtonID="com.spotify.music:id/premium_tab";
@@ -39,6 +42,7 @@ exports.LogOutInSettingsO2ButtonID="";
 exports.SearchButtonID="com.spotify.music:id/search_tab";
 
 exports.SearchFieldID="com.spotify.music:id/find_search_field";
+exports.SearchBarID="com.spotify.music:id/query";
 exports.PlayButtonXpath="/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout[1]/android.view.ViewGroup/android.widget.FrameLayout/androidx.recyclerview.widget.RecyclerView/android.widget.FrameLayout[1]/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.Button"
 exports.MuiscBarID="com.spotify.music:id/track_title"
 exports.LikeSongButtonID="com.spotify.music:id/heart_button"
