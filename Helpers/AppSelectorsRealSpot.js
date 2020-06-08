@@ -77,11 +77,16 @@ exports.Get3monthFreebutton="//*[@id='HERO-0']/article/header/div/div[4]/div[1]/
 exports.ViewPlansbutton="//*[@id='HERO-0']/article/header/div/div[4]/div[2]/a";
 exports.GetStartedIndividualbutton="//*[@id='PLANS']/article/div/div[2]/div/a";
 exports.GetStartedFamilybutton="//*[@id='PLANS']/article/div/div[5]/div/a";
-
-
+exports.Loginbutton="/html/body/div[2]/div[1]/header/div/nav/ul/li[6]/a";
+exports.PremiumbuttonafterLoggingIn="//*[@id='__next']/div/div/div[1]/header/div/nav/ul/li[1]/a";
 //////////////////////////////////////////////
 //Log in Selectors
 exports.SignInbuttonXbath = "//a[contains(text(),'Log In')]";
+exports.LoginInbuttonXbath="//*[@id='main']/div/div[2]/div[1]/header/div[4]/button[2]";
+exports.EmailboxXpath = "//*[@id='login-username']";
+exports.PassWordboxXpath = "//*[@id='login-password']";
+exports.LoggingInButtonXpath = "//*[@id='login-button']";
+
 
 exports.EmailID = "login-username";
 exports.PasswordID = "login-password";
@@ -150,26 +155,26 @@ exports.WebPlayerFooterButtonXpath = '//*[@id="__next"]/div/div/div[3]/footer/na
 exports.WebPlayerRecentlyPlayedLabelXpath ='//*[@id="main"]/div/div[3]/div[4]/div[1]/div/div[2]/section/section/div/section[1]/div/div[1]/div'
 
 //Music Bar Selectors
-exports.PlayButtonXpath='//*[@id="main"]/div/div[3]/div[3]/footer/div/div[2]/div/div[1]/div[3]/button'
-exports.NextButtonXpath='//*[@id="main"]/div/div[3]/div[3]/footer/div/div[2]/div/div[1]/div[4]/button'
-exports.PreviousButtonXpath='//*[@id="main"]/div/div[3]/div[3]/footer/div/div[2]/div/div[1]/div[2]/button'
-exports.EnableShuffleButtonXpath='//*[@id="main"]/div/div[3]/div[3]/footer/div/div[2]/div/div[1]/div[1]/button'
-exports.EnableRepeatButtonXpath='//*[@id="main"]/div/div[3]/div[3]/footer/div/div[2]/div/div[1]/div[5]/button'
+exports.PlayButtonXpath='//*[@id="main"]/div/div[2]/div[3]/footer/div/div[2]/div/div[1]/div[3]/button'
+exports.NextButtonXpath='//*[@id="main"]/div/div[2]/div[3]/footer/div/div[2]/div/div[1]/div[4]/button'
+exports.PreviousButtonXpath='//*[@id="main"]/div/div[2]/div[3]/footer/div/div[2]/div/div[1]/div[2]/button'
+exports.EnableShuffleButtonXpath='//*[@id="main"]/div/div[2]/div[3]/footer/div/div[2]/div/div[1]/div[1]/button'
+exports.EnableRepeatButtonXpath='//*[@id="main"]/div/div[2]/div[3]/footer/div/div[2]/div/div[1]/div[5]/button'
 
-exports.PlaybackBarProgressTime1Xpath='//*[@id="main"]/div/div[3]/div[3]/footer/div/div[2]/div/div[2]/div[1]'
-exports.PlaybackBarProgressTime2Xpath='//*[@id="main"]/div/div[3]/div[3]/footer/div/div[2]/div/div[2]/div[3]'
-exports.ProgressBarXpath='//*[@id="main"]/div/div[3]/div[3]/footer/div/div[2]/div/div[2]/div[2]/div'
+exports.PlaybackBarProgressTime1Xpath='//*[@id="main"]/div/div[2]/div[3]/footer/div/div[2]/div/div[2]/div[1]'
+exports.PlaybackBarProgressTime2Xpath='//*[@id="main"]/div/div[2]/div[3]/footer/div/div[2]/div/div[2]/div[3]'
+exports.ProgressBarXpath='//*[@id="main"]/div/div[2]/div[3]/footer/div/div[2]/div/div[2]/div[2]/div'
 
-exports.PlayQueueButtonXpath='//*[@id="main"]/div/div[3]/div[3]/footer/div/div[3]/div/div/div[1]/div/button'
-exports.ExtraControlsButtonXpath='//*[@id="main"]/div/div[3]/div[3]/footer/div/div[3]/div/div/div[2]'
-exports.MuteButtonXpath='//*[@id="main"]/div/div[3]/div[3]/footer/div/div[3]/div/div/div[3]/button'
-exports.VolumeProgressBarXpath='//*[@id="main"]/div/div[3]/div[3]/footer/div/div[3]/div/div/div[3]/div/div/div/div'
+exports.PlayQueueButtonXpath='//*[@id="main"]/div/div[2]/div[3]/footer/div/div[3]/div/div/div[1]/div/button'
+exports.ExtraControlsButtonXpath='//*[@id="main"]/div/div[2]/div[3]/footer/div/div[3]/div/div/div[2]'
+exports.MuteButtonXpath='//*[@id="main"]/div/div[2]/div[3]/footer/div/div[3]/div/div/div[3]/button'
+exports.VolumeProgressBarXpath='//*[@id="main"]/div/div[2]/div[3]/footer/div/div[3]/div/div/div[3]/div/div/div/div'
 
-exports.SongNameButtonXpath='//*[@id="main"]/div/div[3]/div[3]/footer/div/div[1]/div/div[2]/div[1]'
-exports.ArtistNameButtonXpath='//*[@id="main"]/div/div[3]/div[3]/footer/div/div[1]/div/div[2]/div[2]'
-exports.LikeSongButtonXpath='//*[@id="main"]/div/div[3]/div[3]/footer/div/div[1]/div/div[3]/button'
-exports.RemoveSongButtonXpath='//*[@id="main"]/div/div[3]/div[3]/footer/div/div[1]/div/div[4]/button'
-exports.NowPlayingPipToggleButtonXpath='//*[@id="main"]/div/div[3]/div[3]/footer/div/div[1]/div/div[5]'
+exports.SongNameButtonXpath='//*[@id="main"]/div/div[2]/div[3]/footer/div/div[1]/div/div[2]/div[1]'
+exports.ArtistNameButtonXpath='//*[@id="main"]/div/div[2]/div[3]/footer/div/div[1]/div/div[2]/div[2]'
+exports.LikeSongButtonXpath='//*[@id="main"]/div/div[2]/div[3]/footer/div/div[1]/div/div[3]/button'
+exports.RemoveSongButtonXpath='//*[@id="main"]/div/div[2]/div[3]/footer/div/div[1]/div/div[4]/button'
+exports.NowPlayingPipToggleButtonXpath='//*[@id="main"]/div/div[2]/div[3]/footer/div/div[1]/div/div[5]'
 
 //Webplayer
 exports.LibraryLinkText = 'Your Library'
@@ -215,8 +220,8 @@ exports.ArtistNameLabelXpath='//*[@id="main"]/div/div[3]/div[4]/div[1]/div/div[2
 exports.PlayQueueLabelXpath='//*[@id="main"]/div/div[3]/div[4]/div[1]/div/div[2]/section[1]/h1'
 
 //Liked Songs Selectors
-exports.LikedSongsButtonXpath='//*[@id="main"]/div/div[3]/div[2]/nav/div[2]/div/div/div[2]/a'
-exports.LikedSongsLabelXpath='//*[@id="main"]/div/div[3]/div[4]/div[1]/div/div[2]/section[1]/div[1]/div[5]/span/h1'
+exports.LikedSongsButtonXpath='//*[@id="main"]/div/div[2]/div[2]/nav/div[2]/div/div/div[2]'
+exports.LikedSongsLabelXpath='//*[@id="main"]/div/div[2]/div[4]/div[1]/div/div[2]/section[1]/div[1]/div[5]/span/h1'                            
 exports.PlayButtonInLikedSongsXpath='//*[@id="main"]/div/div[3]/div[4]/div[1]/div/div[2]/section[1]/div[3]/div/button'
 
 //Songs Options Selectors
@@ -241,3 +246,16 @@ exports.PlayButtonInAlpumPageXpath='//*[@id="main"]/div/div[3]/div[4]/div[1]/div
 exports.LikeButtonInAlpumPageXpath='//*[@id="main"]/div/div[3]/div[4]/div[1]/div/div[2]/section[1]/div[3]/div/button[2]'
 exports.MoreOptionsInAlpumPageXpath='//*[@id="main"]/div/div[3]/div[4]/div[1]/div/div[2]/section[1]/div[3]/div/div/button'
 exports.SaveToLibOption='//*[@id="main"]/div/nav[2]/div[2]'
+//Artists Page Seletors All in Xpath
+exports.SearchButton="//*[@id='main']/div/div[2]/div[2]/nav/ul/li[2]/a";
+exports.SearchBar="//*[@id='main']/div/div[2]/div[1]/header/div[3]/div/div/input";
+exports.FirstSearchResultText="//*[@id='searchPage']/div/div/section[1]/div/div[2]/div/div/div/div[2]/a/span";
+exports.FirstSearchResult="//*[@id='searchPage']/div/div/section[1]/div/div[2]/div/div/div";
+exports.FollowAndUnFollowButton="//*[@id='main']/div/div[2]/div[4]/div[1]/div/div[2]/section[1]/div[3]/div/button[2]";
+exports.LibraryButton="//*[@id='main']/div/div[2]/div[2]/nav/ul/li[3]/div/a";
+exports.ArtistsInLibraryButton="//*[@id='main']/div/div[2]/div[1]/header/div[3]/div/nav/ul/li[3]/a";
+exports.FirstArtistTextInLibraryButton="//*[@id='main']/div/div[2]/div[4]/div[1]/div/div[2]/section[1]/div[1]/div/div/div/div[2]/a/span";
+exports.FirstArtistInLibraryButton="//*[@id='main']/div/div[2]/div[4]/div[1]/div/div[2]/section[1]/div[1]/div/div";
+exports.FindArtistsButton="//*[@id='main']/div/div[2]/div[4]/div[1]/div/div[2]/section[1]/section/a";
+exports.ArtistDropDownMenuButton="//*[@id='main']/div/div[2]/div[4]/div[1]/div/div[2]/section[1]/div[3]/div/div/button";
+exports.ArtistDropDownMenuSecondOptionButton="//*[@id='main']/div/nav[6]/div[2]";
