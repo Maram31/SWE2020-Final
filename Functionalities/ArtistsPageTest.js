@@ -8,95 +8,111 @@ describe('ArtistPageTest', function(){
       this.timeout('1500000000');
       var checkstring;
       
-    it('should go to spotify.com/search  and get its title', async () => {
-        await driver.get("https://open.spotify.com/search");
+    it('should go to spotify.com  and login successfully', async () => {
+        await driver.get("https://open.spotify.com");
+        await driver.sleep(8000);
+        await driver.findElement(By.xpath(Selectors.LoginInbuttonXbath)).click();
+        await driver.sleep(8000);
+        await driver.findElement(By.xpath(Selectors.EmailboxXpath)).sendKeys("hebanassif19@gmail.com");
+        await driver.findElement(By.xpath(Selectors.PassWordboxXpath)).sendKeys("Heba1234");
+        await driver.findElement(By.xpath(Selectors.LoggingInButtonXpath)).click();
+        await driver.sleep(8000);
+        await driver.findElement(By.xpath(Selectors.SearchButton)).click();
         checkstring = await driver.getTitle();
-        await driver.sleep(5000);
-        expect(checkstring).to.equal('Spotify - Search');//testing that i reached the req page
+        expect(checkstring).to.equal('Spotify – Search');//testing that i reached the req page
     })
     it('should search for a certain artist', async () => {
-        await driver.findElement(By.xpath("//input[@data-testid='search-input'])")).sendKeys("tamer");
+        await driver.findElement(By.xpath(Selectors.SearchBar)).sendKeys("Tamer Hosny");
         await driver.sleep(5000);
-        checkstring= await driver.findElement(By.xpath("//*[@id='searchPage']/div/div/section[1]/div/div[2]/div/div/div/div[2]/a/span")).getText();
+        checkstring= await driver.findElement(By.xpath(Selectors.FirstSearchResultText)).getText();
         expect(checkstring).to.equal('Tamer Hosny');
         await driver.sleep(5000);
     }) 
-    it('should follow the artist which appears from the search results', async () => {
-        checkstring=await driver.findElement(By.xpath("//*[@id='searchPage']/div/div/section[1]/div/div[2]/div/div/div/div[2]/a/span"));
-        await driver.sleep(5000);
-        driver.actions.contextClick(checkstring).perform();
-        await driver.findElement(By.xpath("//*[@id='main']/div/nav[6]/div[2]/span")).click();
-        checkstring=await driver.findElement(By.xpath("//*[@id='main']/div/nav[6]/div[2]/span")).getText();
-        expect(checkstring).to.equal('unfollow');
-        await driver.sleep(5000);
-    }) 
-    it('should unfollow the artist which appears from the search results', async () => {
-        await driver.findElement(By.xpath("//*[@id='main']/div/nav[6]/div[2]/span")).click();
-        checkstring=await driver.findElement(By.xpath("//*[@id='searchPage']/div/div/section[1]/div/div[2]/div/div/div/div[2]/a/span"));
-        await driver.sleep(5000);
-        driver.actions.contextClick(checkstring).perform();
-        checkstring=await driver.findElement(By.xpath("//*[@id='main']/div/nav[6]/div[2]/span")).getText();
-        expect(checkstring).to.equal('follow');
-        await driver.sleep(5000);
-    }) 
-    it('should follow the artist which appears from the search results and check the library', async () => {
-        checkstring=await driver.findElement(By.xpath("//*[@id='searchPage']/div/div/section[1]/div/div[2]/div/div/div/div[2]/a/span"));
-        await driver.sleep(5000);
-        driver.actions.contextClick(checkstring).perform();
-        await driver.findElement(By.xpath("//*[@id='main']/div/nav[6]/div[2]/span")).click();
-        await driver.findElement(By.xpath("//*[@id='main']/div/div[2]/div[2]/nav/ul/li[3]")).click();
-        await driver.sleep(5000);
-        await driver.findElement(By.xpath("//*[@id='main']/div/div[2]/div[1]/header/div[3]/div/nav/ul/li[3]")).click()
-        await driver.sleep(5000);
-        checkstring=await driver.findElement(By.xpath("//*[@id='main']/div/div[2]/div[4]/div[1]/div/div[2]/section[1]/div[1]/div/div/div/div[2]/a/span")).getText();
-        expect(checkstring).to.equal('Tamer Hosny');
-    }) 
-    it('should unfollow the artist which appears from the search results and check the library', async () => {
-        checkstring=await driver.findElement(By.xpath("//*[@id='main']/div/div[2]/div[4]/div[1]/div/div[2]/section[1]/div[1]/div/div/div/div[2]/a/span"));
-        await driver.sleep(5000);
-        driver.actions.contextClick(checkstring).perform();
-        await driver.findElement(By.xpath("//*[@id='main']/div/nav[6]/div[2]/span")).click();
-        checkstring=await driver.findElement(By.xpath("//*[@id='main']/div/div[2]/div[4]/div[1]/div/div[2]/section[1]/section/a")).getText();
-        expect(checkstring).to.equal('FIND ARTISTS');
-    }) 
+    
     it('should search for a certain artist and open its page', async () => {
-        await driver.findElement(By.xpath("//*[@id='main']/div/div[2]/div[2]/nav/ul/li[2]/a")).click();
-        await driver.findElement(By.xpath("//input[@data-testid='search-input'])")).sendKeys("tamer");
-        await driver.sleep(5000);
-        await driver.findElement(By.xpath("//*[@id='searchPage']/div/div/section[1]/div/div[2]/div/div/div/div[2]/a/span")).click();
+        await driver.findElement(By.xpath(Selectors.FirstSearchResult)).click();
+        await driver.sleep(8000);
         checkstring = await driver.getTitle();
-        await driver.sleep(5000);
-        expect(checkstring).to.equal('Spotify - Tamer Hosny');
+        expect(checkstring).to.equal('Spotify – Tamer Hosny');
     }) 
     it("should follow the artist from the artist's page ", async () => {
-        await driver.findElement(By.xpath("//*[@id='main']/div/div[2]/div[4]/div[1]/div/div[2]/section[1]/div[3]/div/button[2]")).click();
-        checkstring =await driver.findElement(By.xpath("//*[@id='main']/div/div[2]/div[4]/div[1]/div/div[2]/section[1]/div[3]/div/button[2]")).getText();
-        expect(checkstring).to.equal('Following');
+        await driver.findElement(By.xpath(Selectors.FollowAndUnFollowButton)).click();
+        await driver.sleep(5000);
+        checkstring =await driver.findElement(By.xpath(Selectors.FollowAndUnFollowButton)).getText();
+        expect(checkstring).to.equal('FOLLOWING');
     }) 
+    it("should check the library with the new followed artists ", async () => {
+        await driver.findElement(By.xpath(Selectors.LibraryButton)).click();
+        await driver.findElement(By.xpath(Selectors.ArtistsInLibraryButton)).click();
+        await driver.sleep(8000);
+        checkstring =await driver.findElement(By.xpath(Selectors.FirstArtistTextInLibraryButton)).getText();
+        expect(checkstring).to.equal('Tamer Hosny');
+    })
+    
     it("should unfollow the artist from the artist's page ", async () => {
-        await driver.findElement(By.xpath("//*[@id='main']/div/div[2]/div[4]/div[1]/div/div[2]/section[1]/div[3]/div/button[2]")).click();
-        checkstring =await driver.findElement(By.xpath("//*[@id='main']/div/div[2]/div[4]/div[1]/div/div[2]/section[1]/div[3]/div/button[2]")).getText();
-        expect(checkstring).to.equal('Follow');
+        await driver.findElement(By.xpath(Selectors.FirstArtistInLibraryButton)).click();
+        await driver.sleep(8000);
+        await driver.findElement(By.xpath(Selectors.FollowAndUnFollowButton)).click();
+        await driver.sleep(5000);
+        checkstring =await driver.findElement(By.xpath(Selectors.FollowAndUnFollowButton)).getText();
+        expect(checkstring).to.equal('FOLLOW');
+    }) 
+    it("should check the library with the unfollowed artists removed successfuly", async () => {
+        await driver.findElement(By.xpath(Selectors.LibraryButton)).click();
+        await driver.findElement(By.xpath(Selectors.ArtistsInLibraryButton)).click();
+        await driver.sleep(8000);
+        checkstring =await driver.findElement(By.xpath(Selectors.FindArtistsButton)).getText();
+        expect(checkstring).to.equal('FIND ARTISTS');
+    })
+    it('should search for a certain artist', async () => {
+        await driver.findElement(By.xpath(Selectors.SearchButton)).click();
+        await driver.sleep(3000);
+        await driver.findElement(By.xpath(Selectors.SearchBar)).sendKeys("Tamer Hosny");
+        await driver.sleep(5000);
+        checkstring= await driver.findElement(By.xpath(Selectors.FirstSearchResultText)).getText();
+        expect(checkstring).to.equal('Tamer Hosny');
+        await driver.sleep(5000);
+    }) 
+    
+    it('should search for a certain artist and open its page', async () => {
+        await driver.findElement(By.xpath(Selectors.FirstSearchResult)).click();
+        await driver.sleep(8000);
+        checkstring = await driver.getTitle();
+        expect(checkstring).to.equal('Spotify – Tamer Hosny');
     }) 
     it("should follow the artist from the artist's page dropdown menu ", async () => {
-        await driver.findElement(By.xpath("//*[@id='main']/div/div[2]/div[4]/div[1]/div/div[2]/section[1]/div[3]/div/div/button")).click();
-        await driver.findElement(By.xpath("//*[@id='main']/div/nav[6]/div[2]/span")).click();
-        checkstring =await driver.findElement(By.xpath("//*[@id='main']/div/div[2]/div[4]/div[1]/div/div[2]/section[1]/div[3]/div/button[2]")).getText();
-        expect(checkstring).to.equal('Following');
+        await driver.findElement(By.xpath(Selectors.ArtistDropDownMenuButton)).click();
+        await driver.sleep(2000);
+        await driver.findElement(By.xpath(Selectors.ArtistDropDownMenuSecondOptionButton)).click();
+        await driver.sleep(5000);
+        checkstring =await driver.findElement(By.xpath(Selectors.FollowAndUnFollowButton)).getText();
+        expect(checkstring).to.equal('FOLLOWING');
     }) 
+    it("should check the library with the new followed artists ", async () => {
+        await driver.findElement(By.xpath(Selectors.LibraryButton)).click();
+        await driver.findElement(By.xpath(Selectors.ArtistsInLibraryButton)).click();
+        await driver.sleep(5000);
+        checkstring =await driver.findElement(By.xpath(Selectors.FirstArtistTextInLibraryButton)).getText();
+        expect(checkstring).to.equal('Tamer Hosny');
+    })
     it("should unfollow the artist from the artist's page dropdown menu", async () => {
-        await driver.findElement(By.xpath("//*[@id='main']/div/div[2]/div[4]/div[1]/div/div[2]/section[1]/div[3]/div/div/button")).click();
-        await driver.findElement(By.xpath("//*[@id='main']/div/nav[6]/div[2]/span")).click();
-        checkstring =await driver.findElement(By.xpath("//*[@id='main']/div/div[2]/div[4]/div[1]/div/div[2]/section[1]/div[3]/div/button[2]")).getText();
-        expect(checkstring).to.equal('Follow');
+        await driver.findElement(By.xpath(Selectors.FirstArtistInLibraryButton)).click();
+        await driver.sleep(8000);
+        await driver.findElement(By.xpath(Selectors.ArtistDropDownMenuButton)).click();
+        await driver.sleep(2000);
+        await driver.findElement(By.xpath(Selectors.ArtistDropDownMenuSecondOptionButton)).click();
+        await driver.sleep(5000);
+        checkstring =await driver.findElement(By.xpath(Selectors.FollowAndUnFollowButton)).getText();
+        expect(checkstring).to.equal('FOLLOW');
     }) 
-    //follow/unfollow button
-    //*[@id="main"]/div/nav[6]/div[2]/span
-    //*[@id="main"]/div/nav[6]/div[2]
+    it("should check the library with the unfollowed artists removed successfuly", async () => {
+        await driver.findElement(By.xpath(Selectors.LibraryButton)).click();
+        await driver.findElement(By.xpath(Selectors.ArtistsInLibraryButton)).click();
+        await driver.sleep(5000);
+        checkstring =await driver.findElement(By.xpath(Selectors.FindArtistsButton)).getText();
+        expect(checkstring).to.equal('FIND ARTISTS');
+    })
    
-
-    //*[@id="main"]/div/div[2]/div[4]/div[1]/div/div[2]/section[1]/div[3]/div/div/button
-    //*[@id="main"]/div/div[2]/div[4]/div[1]/div/div[2]/section[1]/div[3]/div/div/button/div
     
     after(async () => await driver.quit());
 

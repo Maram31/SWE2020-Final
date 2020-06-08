@@ -82,6 +82,11 @@ exports.GetStartedFamilybutton="//*[@id='PLANS']/article/div/div[5]/div/a";
 //////////////////////////////////////////////
 //Log in Selectors
 exports.SignInbuttonXbath = "//a[contains(text(),'Log In')]";
+exports.LoginInbuttonXbath="//*[@id='main']/div/div[2]/div[1]/header/div[4]/button[2]";
+exports.EmailboxXpath = "//*[@id='login-username']";
+exports.PassWordboxXpath = "//*[@id='login-password']";
+exports.LoggingInButtonXpath = "//*[@id='login-button']";
+
 
 exports.EmailID = "login-username";
 exports.PasswordID = "login-password";
@@ -210,3 +215,16 @@ exports.PlayButtonInAlpumPageXpath='//*[@id="main"]/div/div[3]/div[4]/div[1]/div
 exports.LikeButtonInAlpumPageXpath='//*[@id="main"]/div/div[3]/div[4]/div[1]/div/div[2]/section[1]/div[3]/div/button[2]'
 exports.MoreOptionsInAlpumPageXpath='//*[@id="main"]/div/div[3]/div[4]/div[1]/div/div[2]/section[1]/div[3]/div/div/button'
 exports.SaveToLibOption='//*[@id="main"]/div/nav[2]/div[2]'
+//Artists Page Seletors All in Xpath
+exports.SearchButton="//*[@id='main']/div/div[2]/div[2]/nav/ul/li[2]/a";
+exports.SearchBar="//*[@id='main']/div/div[2]/div[1]/header/div[3]/div/div/input";
+exports.FirstSearchResultText="//*[@id='searchPage']/div/div/section[1]/div/div[2]/div/div/div/div[2]/a/span";
+exports.FirstSearchResult="//*[@id='searchPage']/div/div/section[1]/div/div[2]/div/div/div";
+exports.FollowAndUnFollowButton="//*[@id='main']/div/div[2]/div[4]/div[1]/div/div[2]/section[1]/div[3]/div/button[2]";
+exports.LibraryButton="//*[@id='main']/div/div[2]/div[2]/nav/ul/li[3]/div/a";
+exports.ArtistsInLibraryButton="//*[@id='main']/div/div[2]/div[1]/header/div[3]/div/nav/ul/li[3]/a";
+exports.FirstArtistTextInLibraryButton="//*[@id='main']/div/div[2]/div[4]/div[1]/div/div[2]/section[1]/div[1]/div/div/div/div[2]/a/span";
+exports.FirstArtistInLibraryButton="//*[@id='main']/div/div[2]/div[4]/div[1]/div/div[2]/section[1]/div[1]/div/div";
+exports.FindArtistsButton="//*[@id='main']/div/div[2]/div[4]/div[1]/div/div[2]/section[1]/section/a";
+exports.ArtistDropDownMenuButton="//*[@id='main']/div/div[2]/div[4]/div[1]/div/div[2]/section[1]/div[3]/div/div/button";
+exports.ArtistDropDownMenuSecondOptionButton="//*[@id='main']/div/nav[6]/div[2]";
