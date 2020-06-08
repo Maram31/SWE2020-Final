@@ -112,7 +112,12 @@ describe('ArtistPageTest', function(){
         checkstring =await driver.findElement(By.xpath(Selectors.FindArtistsButton)).getText();
         expect(checkstring).to.equal('FIND ARTISTS');
     })
-   
+    it("should press on add Artist button In the library and check if it is working", async () => {
+        await driver.findElement(By.xpath(Selectors.FindArtistsButton)).click();
+        await driver.sleep(5000);
+        checkstring = await driver.getTitle();
+        expect(checkstring).to.equal('Spotify – Search');//testing that i reached the req page
+    })
     
     after(async () => await driver.quit());
 
