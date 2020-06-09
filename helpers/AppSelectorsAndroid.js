@@ -40,6 +40,19 @@ exports.SettingButton="//android.widget.ImageButton[@content-desc='Settings']";
 exports.SettingButtonID="abaf6fd7-47ba-4ffb-aa56-73ad2bcb7101";
 exports.LogOutInSettingsO2ButtonID="";
 exports.SearchButtonID="com.spotify.music:id/search_tab";
+exports.GoToProfileID='android:id/icon'
+exports.EditProfileID='com.spotify.music:id/edit_button'
+exports.ChangePhotoID='com.spotify.music:id/change_photo'
+exports.ChoosePhotoXpath='/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.ListView/android.widget.TextView[1]'
+exports.RemovePhotoXpath='/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.ListView/android.widget.TextView[3]'
+exports.PhotosFolderXpath='/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/androidx.drawerlayout.widget.DrawerLayout/android.view.ViewGroup/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.ScrollView/android.widget.LinearLayout/android.widget.LinearLayout[1]/android.widget.HorizontalScrollView/android.widget.LinearLayout/android.widget.LinearLayout[2]'
+exports.CameraFolderXpath='/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.support.v7.widget.RecyclerView/android.widget.RelativeLayout'
+exports.FirstPhotoXpath='//android.view.ViewGroup[@content-desc="Photo taken on Jun 9, 2020 3:43:42 PM"]'
+exports.UsePhotoID='com.spotify.music:id/btn_use_photo'
+exports.SaveChangesXpath='/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.Button'
+exports.AllowPermissionID='com.android.permissioncontroller:id/permission_allow_button'
+exports.DisplayNameID='com.spotify.music:id/edit_displayname'
+exports.TitleNameID='com.spotify.music:id/profile_title'
 
 exports.SearchFieldID="com.spotify.music:id/find_search_field";
 exports.SearchBarID="com.spotify.music:id/query";
