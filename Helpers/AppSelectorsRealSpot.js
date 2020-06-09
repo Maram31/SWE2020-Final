@@ -123,6 +123,12 @@ exports.EditProfilePasswordXbath ='//*[@id="profile_confirmPassword"]';
 
 exports.EditProfileSuccessMessageXbath ='/html/body/div[2]/div[2]/div[2]/div/div/div[2]/div/div[1]/div[1]';
 
+exports.RecoverPlaylistXpath="//li[@id='recover_playlists']/a"
+exports.RestoreButtonXpath="//section[@id='deleted-playlists']/div/table/tbody/tr/td[4]/button"
+exports.RestoredXpath="//section[@id='deleted-playlists']/div/table/tbody/tr/td[4]/b"
+
+
+
 //Change Password Selectors
 exports.ChangePasswordButtonXpath='//*[@id="submenu-item-change-password"]';
 exports.ChangePasswordCurrentXpath = '//*[@id="change_password_validatePassword"]';
@@ -179,8 +185,9 @@ exports.NowPlayingPipToggleButtonXpath='//*[@id="main"]/div/div[2]/div[3]/footer
 //Webplayer
 exports.LibraryLinkText = 'Your Library'
 
-exports.UserIconXpath = '//*[@id="main"]/div/div[2]/div[1]/header/div[4]/button/figure/div'
+exports.UserIconXpath = '//*[@id="main"]/div/div[2]/div[1]/header/div[4]/button'
 exports.LogoutXpath = '//*[@id="main"]/div/div[2]/div[1]/header/div[4]/ul/li[4]/button'
+exports.AccountXpath = '//*[@id="main"]/div/div[2]/div[1]/header/div[4]/ul/li[1]/a'
 
 exports.NewPlaylistXpath = '//*[@id="main"]/div/div[3]/div/div[1]/div/button'
 exports.NewPlaylistInputXpath = '//*[@id="main"]/div/div[4]/div/div[1]/div/div/input'
