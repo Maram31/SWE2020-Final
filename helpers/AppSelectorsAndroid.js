@@ -56,7 +56,7 @@ exports.TitleNameID='com.spotify.music:id/profile_title'
 
 exports.SearchFieldID="com.spotify.music:id/find_search_field";
 exports.SearchBarID="com.spotify.music:id/query";
-exports.PlayButtonXpath="/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout[1]/android.view.ViewGroup/android.widget.FrameLayout/androidx.recyclerview.widget.RecyclerView/android.widget.FrameLayout[1]/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.Button"
+exports.PlayButtonXpath="//*[contains(@text, 'SHUFFLE PLAY')]"
 exports.MuiscBarID="com.spotify.music:id/track_title"
 exports.LikeSongButtonID="com.spotify.music:id/heart_button"
 exports.DropDownMenu="com.spotify.music:id/context_menu_button"
