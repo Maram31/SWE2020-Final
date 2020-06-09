@@ -1,5 +1,4 @@
 "use strict";
-
 const {Builder, By, Key, until} = require("selenium-webdriver");
 const {expect} = require('chai');
 const driver = new Builder().forBrowser(require("../Helpers/Driver").Driver).build();
@@ -7,10 +6,11 @@ var Selectors=require("../Helpers/AppSelectorsRealSpot");
 var TestPerson=require("../Helpers/TestData");
 var title;
 
-describe('PlaylistTest', function(){
+describe('PlaylistTest', function() {
+
     this.timeout('1500000000');
     var Checkstring;
-    beforeEach('Open the account and go to webplayer page',async function(){
+    before('Open the account and go to webplayer page',async function() {
         await driver.get("https://www.spotify.com/eg-en/");
         await driver.sleep(5000);
         
@@ -44,44 +44,199 @@ describe('PlaylistTest', function(){
 
     });
 
+    it('Create playlist then add song from random playlist then delete it',async function() {
 
-    it('Create Playlist',async function(){
-        //await driver.findElement(By.xpath(Selectors.CreateNewPlaylistXpath)).click(); 
+        await driver.findElement(By.xpath(Selectors.CreateNewPlaylistXpath)).click(); 
 
-        await driver.sleep(3000);
+        driver.sleep(3000);
         
-        //await driver.findElement(By.linkText(Selectors.LibraryLinkText)).click(); 
+        await driver.findElement(By.xpath(Selectors.CreateNewPlaylistTextInputXpath)).sendKeys('Dance'); 
 
-        //await driver.sleep(3000);
-
-        await driver.findElement(By.xpath(Selectors.FirstPlaylistXpath)).click(); 
-
-        await driver.sleep(3000);
-
-        await driver.findElement(By.xpath(Selectors.SecondSongXpath)).click(); 
-
-        await driver.sleep(3000);
-
-        await driver.findElement(By.xpath(Selectors.SecondSongAddToPlaylistXpath)).click(); 
-
-        await driver.sleep(3000);
-
-        await driver.findElement(By.xpath(Selectors.AddToSecondPlaylistXpath)).click(); 
-
-        await driver.sleep(3000);
-
-        //await driver.findElement(By.xpath(Selectors.InputNewPlaylistNameXpath)).sendKeys('Pop');
-
-        //await driver.sleep(1000);
-
-        //await driver.findElement(By.xpath(Selectors.ConfirmCreateNewPlaylistXpath)).click(); 
-
-        //await driver.sleep(3000);      
-
+        driver.sleep(3000);
         
+        await driver.findElement(By.xpath(Selectors.ConfirmCreateNewPlaylistXpath)).click(); 
+
+        driver.sleep(3000);
+
+        await driver.get("https://open.spotify.com/");
+        await driver.sleep(3000);
+        await driver.getCurrentUrl().then(function(URL){expect(URL).equals("https://open.spotify.com/")});
+
+        await driver.findElement(By.xpath(Selectors.HomeFirstPlaylistXpath)).click(); 
+
+        await driver.sleep(3000);
+
+        await driver.findElement(By.xpath(Selectors.PlaylistFirstSongXpath)).click(); 
+        await driver.findElement(By.xpath(Selectors.PlaylistFirstSongXpath)).click(); 
+
+        await driver.sleep(3000);
+
+        await driver.findElement(By.xpath(Selectors.AddToPlaylistOptionXpath)).click(); 
+
+        await driver.sleep(3000);
+
+        await driver.findElement(By.xpath(Selectors.AddToFirstPlaylistXpath)).click(); 
+
+        await driver.sleep(3000);      
+      
+        await driver.findElement(By.linkText(Selectors.LibraryLinkText)).click(); 
+
+        await driver.sleep(3000);
+
+        await driver.findElement(By.xpath(Selectors.FirstCreatedPlaylistXpath)).click(); 
+
+        await driver.sleep(3000);
+
+        await driver.findElement(By.xpath(Selectors.FirstSongXpath)).click(); 
+        await driver.findElement(By.xpath(Selectors.FirstSongXpath)).click();  
+        
+        await driver.sleep(3000);
+
+        await driver.findElement(By.xpath(Selectors.RemoveFromPlaylistOptionXpath)).click(); 
+
+        await driver.sleep(3000);     
+
+
+        await driver.findElement(By.xpath(Selectors.CreatedPlaylistDetailsXpath)).click(); 
+        await driver.findElement(By.xpath(Selectors.CreatedPlaylistDetailsXpath)).click(); 
+
+        await driver.sleep(3000);
+
+        await driver.findElement(By.xpath(Selectors.CreatedPlaylistDeleteXpath)).click(); 
+
+        await driver.sleep(3000);
+
+        await driver.findElement(By.xpath(Selectors.PlaylistDeleteButtonXpath)).click(); 
+
+        await driver.sleep(3000);  
+
     });
 
-   
+    it('Select random playlist then add song to another playlist',async function() {
 
- after(async () => await driver.quit());
+        await driver.get("https://open.spotify.com/");
+        await driver.sleep(3000);
+        await driver.getCurrentUrl().then(function(URL){expect(URL).equals("https://open.spotify.com/")});
+
+        await driver.findElement(By.xpath(Selectors.HomeFirstPlaylistXpath)).click(); 
+
+        await driver.sleep(3000);
+
+        await driver.findElement(By.xpath(Selectors.FirstSongXpath)).click(); 
+
+        await driver.findElement(By.xpath(Selectors.FirstSongXpath)).click(); 
+
+        await driver.sleep(3000);
+
+        await driver.findElement(By.xpath(Selectors.AddToPlaylistOptionXpath)).click(); 
+
+        await driver.sleep(3000);
+
+        await driver.findElement(By.xpath(Selectors.AddToFirstPlaylistXpath)).click(); 
+
+        await driver.sleep(3000);   
+        
+        await driver.findElement(By.linkText(Selectors.LibraryLinkText)).click(); 
+
+        await driver.sleep(3000);
+
+        await driver.findElement(By.xpath(Selectors.FirstCreatedPlaylistXpath)).click(); 
+
+        await driver.sleep(3000);
+
+
+    }); 
+    
+
+    it('Select random playlist then add song to new created playlist',async function() {
+
+        await driver.get("https://open.spotify.com/");
+        await driver.sleep(3000);
+        await driver.getCurrentUrl().then(function(URL){expect(URL).equals("https://open.spotify.com/")});
+        
+        await driver.findElement(By.xpath(Selectors.HomeSixthPlaylistXpath)).click(); 
+
+        await driver.sleep(3000);
+
+        await driver.findElement(By.xpath(Selectors.FirstSongXpath)).click(); 
+
+        await driver.findElement(By.xpath(Selectors.FirstSongXpath)).click(); 
+
+        await driver.sleep(3000);
+
+        await driver.findElement(By.xpath(Selectors.AddToPlaylistOptionXpath)).click(); 
+
+        await driver.sleep(3000);
+
+        await driver.findElement(By.xpath(Selectors.NewPlaylistXpath)).click(); 
+
+        await driver.sleep(3000);    
+
+        await driver.findElement(By.xpath(Selectors.NewPlaylistInputXpath)).sendKeys('Country'); 
+
+        await driver.sleep(3000);
+
+        await driver.findElement(By.xpath(Selectors.NewPlaylistConfirmXpath)).click(); 
+
+        await driver.sleep(3000);    
+
+        await driver.findElement(By.linkText(Selectors.LibraryLinkText)).click(); 
+
+        await driver.sleep(3000);
+
+        await driver.findElement(By.xpath(Selectors.FirstCreatedPlaylistXpath)).click(); 
+
+        await driver.sleep(3000);
+
+
+    }); 
+
+
+    it('Search for song and add to playlist',async function() {
+
+        await driver.get("https://open.spotify.com/");
+        await driver.sleep(3000);
+        await driver.getCurrentUrl().then(function(URL){expect(URL).equals("https://open.spotify.com/")});
+        
+        await driver.findElement(By.xpath(Selectors.SearchIconXpath)).click(); 
+
+        await driver.sleep(3000);
+
+        await driver.findElement(By.xpath(Selectors.SearchBarXpath)).sendKeys('Baby Shark'); 
+
+        await driver.sleep(5000)
+
+        await driver.findElement(By.xpath(Selectors.SongSearchResultXpath)).click(); 
+
+        await driver.sleep(3000)        
+
+        await driver.findElement(By.xpath(Selectors.FirstSongXpath)).click(); 
+        await driver.findElement(By.xpath(Selectors.FirstSongXpath)).click(); 
+
+        await driver.sleep(3000);
+
+        await driver.findElement(By.xpath(Selectors.AddToPlaylistOptionXpath)).click(); 
+
+        await driver.sleep(3000);    
+        
+        await driver.findElement(By.xpath(Selectors.AddToFirstPlaylistXpath)).click(); 
+
+        await driver.sleep(3000); 
+
+    });   
+
+    after(async function() {
+        await driver.findElement(By.xpath(Selectors.UserIconXpath)).click(); 
+
+        await driver.sleep(3000);
+
+        await driver.findElement(By.xpath(Selectors.LogoutXpath)).click(); 
+
+        await driver.sleep(3000);
+
+        await driver.quit();
+
+    });
+
 });
+    
