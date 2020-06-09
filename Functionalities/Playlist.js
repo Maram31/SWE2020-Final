@@ -6,7 +6,7 @@ var wd = require("wd"),
   actions = require("../helpers/actions"),
   serverConfigs = require('../helpers/appium-servers');
 wd.addPromiseChainMethod('swipe', actions.swipe);
-describe("Music Bar Teasr",
+describe("Playlist Tests",
   function () {
     this.timeout(300000);
     var driver;
@@ -47,7 +47,7 @@ describe("Music Bar Teasr",
         .elementByXPath(appSelectors.LogInButtonID).click()
         .sleep(1000)
     });
-/*
+
     it("search for song and add it to a new playlist", async function () {
         return driver
         .elementById(appSelectors.SearchButtonID).click()
@@ -143,7 +143,7 @@ describe("Music Bar Teasr",
         .sleep(1000)
         
       });
-*/
+
 
       it("Create new playlist and add songs to it then rename it", async function () {
         return driver
