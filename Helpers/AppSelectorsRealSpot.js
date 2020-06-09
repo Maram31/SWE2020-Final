@@ -266,3 +266,19 @@ exports.FirstArtistInLibraryButton="//*[@id='main']/div/div[2]/div[4]/div[1]/div
 exports.FindArtistsButton="//*[@id='main']/div/div[2]/div[4]/div[1]/div/div[2]/section[1]/section/a";
 exports.ArtistDropDownMenuButton="//*[@id='main']/div/div[2]/div[4]/div[1]/div/div[2]/section[1]/div[3]/div/div/button";
 exports.ArtistDropDownMenuSecondOptionButton="//*[@id='main']/div/nav[6]/div[2]";
+
+//Footer Links
+exports.AboutLinkText="About";
+exports.JobsLinkText="Jobs";
+exports.ForTheRecordLinkText="For the Record";
+exports.ForArtistsLinkText="For Artists";
+exports.DevelopersLinkText="Developers";
+exports.BrandsLinkText="Brands";
+exports.InvestorsLinkText="Investors";
+exports.VendorsLinkText="Vendors";
+exports.LegalLinkText="Legal";
+exports.PrivacyCenterLinkText="Privacy Center";
+exports.PrivacyPolicyLinkText="Privacy Policy";
+exports.CookiesLinkText="Cookies";
+exports.AboutAdsLinkText="About Ads";
+exports.CountryXpath="//footer[@id='mh-footer']/nav/div[4]/a";
